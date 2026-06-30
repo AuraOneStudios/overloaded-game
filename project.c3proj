@@ -68,7 +68,8 @@
 			"Proj_Wrench",
 			"Audio",
 			"Title",
-			"StartButton"
+			"StartButton",
+			"Sprite"
 		],
 		"subfolders": []
 	},
@@ -120,6 +121,14 @@
 					"name": "overload.wav",
 					"type": "audio/wav",
 					"sid": 204476685500747,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Abyss of Deeds.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 858311280882289,
 					"file-info": {
 						"purpose": "none"
 					}

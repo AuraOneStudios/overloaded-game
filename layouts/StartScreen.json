@@ -58,7 +58,7 @@
 				{
 					"type": "StartButton",
 					"properties": {
-						"text": "Press ENTER to Start",
+						"text": "Aperte ENTER",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 22,
@@ -94,6 +94,39 @@
 						"height": 32,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Sprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Start",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"sid": 504547843304153,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 609,
+						"y": 521,
+						"width": 300,
+						"height": 115,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

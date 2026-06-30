@@ -535,6 +535,36 @@
 				}
 			],
 			"sid": 676809822085410
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 760383554984801,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 370809744993368,
+					"parameters": {
+						"audio-file": {
+							"path": "shoot"
+						},
+						"loop": "not-looping",
+						"volume": "100",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 696916718029922
 		}
 	],
 	"sid": 984714394744369
