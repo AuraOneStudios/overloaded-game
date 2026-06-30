@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 733017425062559
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -329,6 +339,15 @@
 					"id": "destroy",
 					"objectClass": "Enemy_Lycan",
 					"sid": 586114262620415
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 948994673914278,
+					"parameters": {
+						"variable": "Score",
+						"value": "1"
+					}
 				}
 			],
 			"sid": 531245180972642
@@ -382,6 +401,58 @@
 				}
 			],
 			"sid": 158222095087546
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Enemy_Lycan",
+					"sid": 556483521560483,
+					"parameters": {
+						"comparison": 2,
+						"y-co-ordinate": "Char_Lizzie.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Enemy_Lycan",
+					"sid": 328213349385228,
+					"parameters": {
+						"where": "behind",
+						"object": "Char_Lizzie"
+					}
+				}
+			],
+			"sid": 920764943515667
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Enemy_Lycan",
+					"sid": 438943780713608,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "Char_Lizzie.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Enemy_Lycan",
+					"sid": 843353697616642,
+					"parameters": {
+						"where": "in-front",
+						"object": "Char_Lizzie"
+					}
+				}
+			],
+			"sid": 986341585583904
 		}
 	],
 	"sid": 984714394744369
