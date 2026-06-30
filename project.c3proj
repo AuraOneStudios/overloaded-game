@@ -38,13 +38,32 @@
 	"uniqueId": "lo9kp3a3v7q",
 	"objectTypes": {
 		"items": [
-			"Map1",
-			"Lizzie",
-			"Keyboard",
-			"Lycan",
-			"LycanFurious"
+			"Keyboard"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Lizzie"
+				],
+				"subfolders": [],
+				"name": "Characters"
+			},
+			{
+				"items": [
+					"Lycan",
+					"LycanFurious"
+				],
+				"subfolders": [],
+				"name": "Enemies"
+			},
+			{
+				"items": [
+					"Map1"
+				],
+				"subfolders": [],
+				"name": "Environment"
+			}
+		]
 	},
 	"functionsName": "Functions",
 	"autosaveData": null,
