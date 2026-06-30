@@ -12,6 +12,16 @@
 			"sid": 733017425062559
 		},
 		{
+			"eventType": "variable",
+			"name": "Health",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 618039774825109
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -99,9 +109,9 @@
 				{
 					"id": "set-animation",
 					"objectClass": "Char_Lizzie",
-					"sid": 829101605893634,
+					"sid": 544454146951468,
 					"parameters": {
-						"animation": "\"Idle\"",
+						"animation": "Char_Lizzie.IsOverloaded ? \"ArchieIdle\" : \"Idle\"",
 						"from": "beginning"
 					}
 				}
@@ -145,13 +155,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 348780578899338,
+					"sid": 345167100313265,
 					"parameters": {
 						"audio-file": {
 							"path": "shoot"
 						},
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "-10",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -247,13 +257,13 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 834111501837988,
+					"sid": 397322277224996,
 					"parameters": {
 						"audio-file": {
 							"path": "hit"
 						},
 						"loop": "not-looping",
-						"volume": "0",
+						"volume": "-10",
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
@@ -316,20 +326,6 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 198194117938538,
-					"parameters": {
-						"audio-file": {
-							"path": "howl"
-						},
-						"loop": "not-looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 963567771462189,
@@ -365,6 +361,20 @@
 							"behaviorType": "Bullet",
 							"parameters": {
 								"speed": "360"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 390721321836908,
+							"parameters": {
+								"audio-file": {
+									"path": "howl"
+								},
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
@@ -554,21 +564,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 760383554984801,
-					"parameters": {
-						"key": 32
-					}
-				}
-			],
-			"actions": [],
-			"sid": 696916718029922
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 222219612547935
@@ -591,6 +586,126 @@
 				}
 			],
 			"sid": 726118706618611
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 364591320627022
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Proj_Wrench",
+					"sid": 302606299986712,
+					"parameters": {
+						"angle": "Proj_Wrench.Angle + 20"
+					}
+				}
+			],
+			"sid": 471750907592733
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy_Lycan",
+					"sid": 411602469591345,
+					"parameters": {
+						"object": "Char_Lizzie"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 796008059595992,
+					"parameters": {
+						"variable": "Health",
+						"value": "10"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy_Lycan",
+					"sid": 910660995162403
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 148906606105444,
+					"parameters": {
+						"audio-file": {
+							"path": "hit"
+						},
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 948278056080939
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 528924026054688,
+					"parameters": {
+						"variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 967100002242233
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 321597011583659,
+					"parameters": {
+						"layout": "GameOver"
+					}
+				}
+			],
+			"sid": 165622374949460
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 710366548726889,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 271902777369408,
+					"parameters": {
+						"layout": "StartScreen"
+					}
+				}
+			],
+			"sid": 876820596477450
 		}
 	],
 	"sid": 984714394744369

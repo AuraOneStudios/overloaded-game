@@ -83,14 +83,16 @@
 	"layouts": {
 		"items": [
 			"GamePlay",
-			"StartScreen"
+			"StartScreen",
+			"GameOver"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Event sheet 2"
+			"Event sheet 2",
+			"Event sheet 3"
 		],
 		"subfolders": []
 	},
@@ -132,6 +134,14 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "overload.wav",
+					"type": "audio/wav",
+					"sid": 862355302554326,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -150,6 +160,14 @@
 					"name": "abyss_of_deeds.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 790824416677709,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "game_bgm.wav",
+					"type": "audio/wav",
+					"sid": 615515108579034,
 					"file-info": {
 						"purpose": "none"
 					}

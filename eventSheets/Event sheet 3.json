@@ -1,0 +1,38 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 962649039972838,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 353372881617122,
+					"parameters": {
+						"reset-static": false
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 250443893150488,
+					"parameters": {
+						"layout": "GamePlay"
+					}
+				}
+			],
+			"sid": 919350212745002
+		}
+	],
+	"sid": 917424654052896
+}
