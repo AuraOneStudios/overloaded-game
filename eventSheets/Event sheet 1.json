@@ -97,6 +97,110 @@
 				}
 			],
 			"sid": 948861590155579
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 387898653013021,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Char_Lizzie",
+					"sid": 534792856072223,
+					"parameters": {
+						"object": "Proj_Wrench",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Proj_Wrench",
+					"sid": 167490411780530,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "random(360)"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Proj_Wrench",
+					"sid": 788648514722221,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "400"
+					}
+				}
+			],
+			"sid": 890480686751269
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-distance-travelled",
+					"objectClass": "Proj_Wrench",
+					"sid": 183634452809074,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 5,
+						"distance": "600"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Proj_Wrench",
+					"sid": 319660300803159,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "angle(Proj_Wrench.X, Proj_Wrench.Y, Char_Lizzie.X, Char_Lizzie.Y)"
+					}
+				}
+			],
+			"sid": 859677704920012
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Proj_Wrench",
+					"sid": 156648450583516,
+					"parameters": {
+						"object": "Char_Lizzie"
+					}
+				},
+				{
+					"id": "compare-distance-travelled",
+					"objectClass": "Proj_Wrench",
+					"sid": 491845846844016,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 5,
+						"distance": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Proj_Wrench",
+					"sid": 562262211049421
+				}
+			],
+			"sid": 643430937848527
 		}
 	],
 	"sid": 984714394744369
