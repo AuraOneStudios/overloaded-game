@@ -46,10 +46,10 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 236567542418445,
+					"sid": 106298702389785,
 					"parameters": {
 						"audio-file": {
-							"path": "Abyss of Deeds"
+							"path": "abyss_of_deeds"
 						},
 						"loop": "looping",
 						"volume": "0",

@@ -141,6 +141,20 @@
 					"parameters": {
 						"speed": "400"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 348780578899338,
+					"parameters": {
+						"audio-file": {
+							"path": "shoot"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 890480686751269,
@@ -229,6 +243,20 @@
 					"id": "destroy",
 					"objectClass": "Proj_Wrench",
 					"sid": 562262211049421
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 834111501837988,
+					"parameters": {
+						"audio-file": {
+							"path": "hit"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 643430937848527
@@ -287,6 +315,20 @@
 						"y": "Char_Lizzie.Y + random(-500, 500)",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 198194117938538,
+					"parameters": {
+						"audio-file": {
+							"path": "howl"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -490,6 +532,20 @@
 						"instance-variable": "IsOverloaded",
 						"value": "true"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 256016132002821,
+					"parameters": {
+						"audio-file": {
+							"path": "overload"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 676809822085410
@@ -508,6 +564,33 @@
 			],
 			"actions": [],
 			"sid": 696916718029922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 222219612547935
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 817639234592714,
+					"parameters": {
+						"audio-file": {
+							"path": "game_bgm"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 726118706618611
 		}
 	],
 	"sid": 984714394744369

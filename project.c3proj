@@ -102,22 +102,6 @@
 		"sound": {
 			"items": [
 				{
-					"name": "Abyss of Deeds.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 858311280882289,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "shoot.wav",
-					"type": "audio/wav",
-					"sid": 897490504917771,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "hit.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 428618288555627,
@@ -142,33 +126,9 @@
 					}
 				},
 				{
-					"name": "overload.wav",
-					"type": "audio/wav",
-					"sid": 821328788865082,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "hit.wav",
-					"type": "audio/wav",
-					"sid": 340040987388498,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "overload.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 473110882618169,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "howl.wav",
-					"type": "audio/wav",
-					"sid": 226353521819720,
+					"sid": 904426562668500,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -177,7 +137,24 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "game_bgm.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 866861381049480,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "abyss_of_deeds.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 790824416677709,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -277,7 +254,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1.30.12",
+		"version": "0.1.30.14",
 		"autoIncrementVersion": true,
 		"author": "AuraOne Studios",
 		"authorEmail": "fabiomendesilva@gmail.com",

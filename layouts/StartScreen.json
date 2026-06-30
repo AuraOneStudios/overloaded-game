@@ -23,10 +23,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 633.5,
-						"y": 359,
-						"width": 1279,
-						"height": 709,
+						"x": 638,
+						"y": 361.5,
+						"width": 1288,
+						"height": 724,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -56,9 +56,9 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 649,
-						"y": 638,
-						"width": 811,
+						"x": 640,
+						"y": 649,
+						"width": 564,
 						"height": 216,
 						"originX": 0.5,
 						"originY": 0.5,
