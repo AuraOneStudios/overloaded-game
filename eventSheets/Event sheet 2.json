@@ -15,17 +15,11 @@
 			],
 			"actions": [
 				{
-					"id": "play",
+					"id": "stop",
 					"objectClass": "Audio",
-					"sid": 332450612807628,
+					"sid": 686446281858377,
 					"parameters": {
-						"audio-file": {
-							"path": "Abyss of Deeds"
-						},
-						"loop": "looping",
-						"volume": "0",
-						"stereo-pan": "0",
-						"tag-optional": "\"\""
+						"tag": "\"MusicMenu\""
 					}
 				},
 				{
@@ -38,6 +32,67 @@
 				}
 			],
 			"sid": 512126073050814
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 496775370229305
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 236567542418445,
+					"parameters": {
+						"audio-file": {
+							"path": "Abyss of Deeds"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"MusicMenu\""
+					}
+				}
+			],
+			"sid": 393732365217266
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 544189603001063,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "StartButtom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 561158408759903,
+					"parameters": {
+						"tag": "\"MusicMenu\""
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 232233399046576,
+					"parameters": {
+						"layout": "GamePlay"
+					}
+				}
+			],
+			"sid": 215928731637060
 		}
 	],
 	"sid": 750054262360482

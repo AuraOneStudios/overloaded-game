@@ -22,15 +22,15 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
+			"id": "Mouse",
+			"name": "Mouse",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Text",
-			"name": "Text",
+			"id": "Sprite",
+			"name": "Sprite",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -67,9 +67,9 @@
 			"UI_HUD_Overpowered",
 			"Proj_Wrench",
 			"Audio",
-			"Title",
-			"StartButton",
-			"Sprite"
+			"Sprite",
+			"StartButtom",
+			"Mouse"
 		],
 		"subfolders": []
 	},
@@ -102,17 +102,41 @@
 		"sound": {
 			"items": [
 				{
-					"name": "shoot.wav",
-					"type": "audio/wav",
-					"sid": 100287372974080,
+					"name": "Abyss of Deeds.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 858311280882289,
 					"file-info": {
 						"purpose": "none"
 					}
 				},
 				{
-					"name": "hit.wav",
+					"name": "shoot.wav",
 					"type": "audio/wav",
-					"sid": 799698793209650,
+					"sid": 897490504917771,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 428618288555627,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "howl.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 201408293147513,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 747300740338084,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -120,15 +144,31 @@
 				{
 					"name": "overload.wav",
 					"type": "audio/wav",
-					"sid": 204476685500747,
+					"sid": 821328788865082,
 					"file-info": {
 						"purpose": "none"
 					}
 				},
 				{
-					"name": "Abyss of Deeds.webm",
+					"name": "hit.wav",
+					"type": "audio/wav",
+					"sid": 340040987388498,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "overload.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 858311280882289,
+					"sid": 473110882618169,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "howl.wav",
+					"type": "audio/wav",
+					"sid": 226353521819720,
 					"file-info": {
 						"purpose": "none"
 					}

@@ -9,24 +9,33 @@ def save_wav(filename, samples, sample_rate=44100):
         wav_file.setnchannels(1)
         wav_file.setsampwidth(2)
         wav_file.setframerate(sample_rate)
-        for s in samples:
-            wav_file.writeframes(struct.pack('h', int(s * 32767.0)))
+        # Fast write
+        packed_data = bytearray(len(samples) * 2)
+        for i, s in enumerate(samples):
+            # clamp
+            s = max(-1.0, min(1.0, s))
+            struct.pack_into('<h', packed_data, i * 2, int(s * 32767))
+        wav_file.writeframes(packed_data)
 
 def generate_shoot():
+    # "Whoosh" of a heavy wrench spinning
     samples = []
-    duration = 0.15
+    duration = 0.25
     sample_rate = 44100
     for i in range(int(duration * sample_rate)):
         t = i / sample_rate
-        # Frequency starts at 800 and goes down to 200
-        freq = 800 - (600 * (t / duration))
-        # Envelope: start loud, decay quickly
-        env = max(0, 1.0 - (t / duration) * 2)
-        val = math.sin(2 * math.pi * freq * t) * env
-        samples.append(val * 0.5)
+        # Amplitude modulation to simulate spinning (flutter at ~12Hz)
+        spin = math.sin(2 * math.pi * 12 * t)
+        if spin < 0: spin = 0
+        # Noise
+        val = random.uniform(-1, 1)
+        # Envelope: fast attack, quick decay
+        env = max(0, 1.0 - (t / duration)**1.5)
+        samples.append(val * spin * env * 0.5)
     return samples
 
 def generate_hit():
+    # Hit/Impact (same as before)
     samples = []
     duration = 0.2
     sample_rate = 44100
@@ -37,29 +46,42 @@ def generate_hit():
         samples.append(val * 0.5)
     return samples
 
-def generate_overload():
+def generate_howl():
+    # Wolf howl
     samples = []
-    duration = 1.0
+    duration = 1.6
     sample_rate = 44100
     for i in range(int(duration * sample_rate)):
         t = i / sample_rate
-        # Frequency rises rapidly
-        freq = 300 + (1200 * (t / duration)**2)
-        # Envelope: fade in, hold, fade out
-        if t < 0.2: env = t / 0.2
-        elif t > 0.8: env = (1.0 - t) / 0.2
+        
+        # Pitch curve: starts at 300, glides up to 450, holds, glides down to 250
+        if t < 0.4: freq = 300 + (150 * (t / 0.4))
+        elif t < 1.0: freq = 450
+        else: freq = 450 - (200 * ((t - 1.0) / 0.6))
+            
+        # Vibrato (wobble in pitch)
+        vibrato = math.sin(2 * math.pi * 5 * t) * 6
+        
+        # Envelope: slow attack, hold, slow release
+        if t < 0.3: env = t / 0.3
+        elif t > 1.0: env = max(0, 1.0 - ((t - 1.0) / 0.6))
         else: env = 1.0
-        # Square wave for mechanical sound
-        val = 1.0 if math.sin(2 * math.pi * freq * t) > 0 else -1.0
-        samples.append(val * 0.4 * env)
+        
+        # Tone: sine wave with some harmonics
+        val = math.sin(2 * math.pi * (freq + vibrato) * t)
+        val += 0.2 * math.sin(2 * math.pi * ((freq + vibrato) * 2.0) * t)
+        
+        # Add slight noise for breathiness
+        val += 0.05 * random.uniform(-1, 1)
+        
+        samples.append(val * env * 0.4)
     return samples
 
 if __name__ == '__main__':
     sounds_dir = 'sounds'
-    if not os.path.exists(sounds_dir):
-        os.makedirs(sounds_dir)
+    if not os.path.exists(sounds_dir): os.makedirs(sounds_dir)
     
     save_wav(os.path.join(sounds_dir, 'shoot.wav'), generate_shoot())
     save_wav(os.path.join(sounds_dir, 'hit.wav'), generate_hit())
-    save_wav(os.path.join(sounds_dir, 'overload.wav'), generate_overload())
-    print("Sons gerados com sucesso na pasta 'sounds'!")
+    save_wav(os.path.join(sounds_dir, 'howl.wav'), generate_howl())
+    print("Novos sons (wrench e howl) gerados!")

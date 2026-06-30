@@ -7,104 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Title",
-					"properties": {
-						"text": "OVERLOADED",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 48,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 9,
-					"sid": 525751492279112,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 399,
-						"y": 234,
-						"width": 450,
-						"height": 88,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "StartButton",
-					"properties": {
-						"text": "Aperte ENTER",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 22,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 10,
-					"sid": 224226022222263,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 484,
-						"y": 441,
-						"width": 293,
-						"height": 32,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
 					"type": "Sprite",
 					"properties": {
 						"initially-visible": true,
@@ -121,10 +23,43 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 609,
-						"y": 521,
-						"width": 300,
-						"height": 115,
+						"x": 633.5,
+						"y": 359,
+						"width": 1279,
+						"height": 709,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "StartButtom",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Start",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"sid": 814777362366069,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 649,
+						"y": 638,
+						"width": 811,
+						"height": 216,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
