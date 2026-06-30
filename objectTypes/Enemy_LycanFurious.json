@@ -1,7 +1,7 @@
 {
-	"name": "Lycan",
+	"name": "Enemy_LycanFurious",
 	"plugin-id": "Sprite",
-	"sid": 116205992325724,
+	"sid": 416615175714667,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
@@ -20,24 +20,24 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1786147,
+						"imageSpriteId": 4686408,
 						"collisionPoly": {
 							"points": [
-								0.61,
+								0.65,
 								0.07,
-								0.77,
+								0.81,
 								0.52,
-								0.76,
 								0.8,
-								0.69,
+								0.8,
+								0.73,
 								0.86,
-								0.23,
+								0.27,
 								0.87,
-								0.2,
+								0.24,
 								0.83,
-								0.19,
+								0.23,
 								0.43,
-								0.31,
+								0.35,
 								0.09
 							]
 						},
@@ -46,7 +46,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 448314531579329,
+				"sid": 315775170789523,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

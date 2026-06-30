@@ -6,7 +6,7 @@
 			"conditions": [
 				{
 					"id": "is-moving",
-					"objectClass": "Lizzie",
+					"objectClass": "Char_Lizzie",
 					"sid": 482416075397239,
 					"behaviorType": "8Direction"
 				}
@@ -14,7 +14,7 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "Lizzie",
+					"objectClass": "Char_Lizzie",
 					"sid": 646397746187567,
 					"parameters": {
 						"animation": "\"Walk\"",
@@ -39,7 +39,7 @@
 					"actions": [
 						{
 							"id": "set-mirrored",
-							"objectClass": "Lizzie",
+							"objectClass": "Char_Lizzie",
 							"sid": 467926765994177,
 							"parameters": {
 								"state": "mirrored"
@@ -63,7 +63,7 @@
 					"actions": [
 						{
 							"id": "set-mirrored",
-							"objectClass": "Lizzie",
+							"objectClass": "Char_Lizzie",
 							"sid": 712411193778868,
 							"parameters": {
 								"state": "not-mirrored"
@@ -79,7 +79,7 @@
 			"conditions": [
 				{
 					"id": "is-moving",
-					"objectClass": "Lizzie",
+					"objectClass": "Char_Lizzie",
 					"sid": 511669622565585,
 					"behaviorType": "8Direction",
 					"isInverted": true
@@ -88,7 +88,7 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "Lizzie",
+					"objectClass": "Char_Lizzie",
 					"sid": 829101605893634,
 					"parameters": {
 						"animation": "\"Idle\"",

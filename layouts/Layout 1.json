@@ -40,7 +40,7 @@
 					}
 				},
 				{
-					"type": "Lizzie",
+					"type": "Char_Lizzie",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -91,7 +91,7 @@
 					}
 				},
 				{
-					"type": "Lycan",
+					"type": "Enemy_Lycan",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -124,7 +124,7 @@
 					}
 				},
 				{
-					"type": "LycanFurious",
+					"type": "Enemy_LycanFurious",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",

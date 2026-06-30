@@ -39,10 +39,10 @@
 	"objectTypes": {
 		"items": [
 			"Map1",
-			"Lizzie",
+			"Char_Lizzie",
 			"Keyboard",
-			"Lycan",
-			"LycanFurious"
+			"Enemy_Lycan",
+			"Enemy_LycanFurious"
 		],
 		"subfolders": []
 	},
