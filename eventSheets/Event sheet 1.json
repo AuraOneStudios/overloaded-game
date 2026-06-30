@@ -6,7 +6,7 @@
 			"conditions": [
 				{
 					"id": "is-moving",
-					"objectClass": "Sprite2",
+					"objectClass": "Lizzie",
 					"sid": 482416075397239,
 					"behaviorType": "8Direction"
 				}
@@ -14,7 +14,7 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "Sprite2",
+					"objectClass": "Lizzie",
 					"sid": 646397746187567,
 					"parameters": {
 						"animation": "\"Walk\"",
@@ -30,7 +30,7 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
-							"sid": 611414810878250,
+							"sid": 649857719404178,
 							"parameters": {
 								"key": 37
 							}
@@ -39,40 +39,38 @@
 					"actions": [
 						{
 							"id": "set-mirrored",
-							"objectClass": "Sprite2",
-							"sid": 198746461411504,
+							"objectClass": "Lizzie",
+							"sid": 467926765994177,
 							"parameters": {
 								"state": "mirrored"
 							}
 						}
 					],
-					"sid": 521049037211047,
-					"children": [
+					"sid": 427639337445033
+				},
+				{
+					"eventType": "block",
+					"conditions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "key-is-down",
-									"objectClass": "Keyboard",
-									"sid": 917072818238969,
-									"parameters": {
-										"key": 39
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-mirrored",
-									"objectClass": "Sprite2",
-									"sid": 968692721370862,
-									"parameters": {
-										"state": "not-mirrored"
-									}
-								}
-							],
-							"sid": 175921747441751
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 827703585371524,
+							"parameters": {
+								"key": 39
+							}
 						}
-					]
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Lizzie",
+							"sid": 712411193778868,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 914011778297238
 				}
 			]
 		},
@@ -81,7 +79,7 @@
 			"conditions": [
 				{
 					"id": "is-moving",
-					"objectClass": "Sprite2",
+					"objectClass": "Lizzie",
 					"sid": 511669622565585,
 					"behaviorType": "8Direction",
 					"isInverted": true
@@ -90,7 +88,7 @@
 			"actions": [
 				{
 					"id": "set-animation",
-					"objectClass": "Sprite2",
+					"objectClass": "Lizzie",
 					"sid": 829101605893634,
 					"parameters": {
 						"animation": "\"Idle\"",

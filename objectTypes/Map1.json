@@ -1,5 +1,5 @@
 {
-	"name": "Sprite",
+	"name": "Map1",
 	"plugin-id": "Sprite",
 	"sid": 405739035063272,
 	"isGlobal": false,
@@ -19,8 +19,8 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"fileType": "image/jpeg",
-						"imageSpriteId": 1088944,
+						"fileType": "image/png",
+						"imageSpriteId": 6038459,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

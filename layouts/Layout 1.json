@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite",
+					"type": "Map1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -40,7 +40,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "Lizzie",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -74,10 +74,76 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 300,
-						"y": 179,
+						"x": 664,
+						"y": 341,
 						"width": 41,
 						"height": 43,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "Lycan",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"sid": 356222544487989,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 734,
+						"y": 339,
+						"width": 61,
+						"height": 63,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 0,
+						"angle": 0
+					}
+				},
+				{
+					"type": "LycanFurious",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 6,
+					"sid": 443921142583995,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 589,
+						"y": 335,
+						"width": 61,
+						"height": 63,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -145,8 +211,8 @@
 			],
 			"isTransparent": true,
 			"sampling": "auto",
-			"parallaxX": 1,
-			"parallaxY": 1,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",

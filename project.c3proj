@@ -38,9 +38,11 @@
 	"uniqueId": "lo9kp3a3v7q",
 	"objectTypes": {
 		"items": [
-			"Sprite",
-			"Sprite2",
-			"Keyboard"
+			"Map1",
+			"Lizzie",
+			"Keyboard",
+			"Lycan",
+			"LycanFurious"
 		],
 		"subfolders": []
 	},

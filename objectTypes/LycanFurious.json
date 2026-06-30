@@ -1,0 +1,60 @@
+{
+	"name": "LycanFurious",
+	"plugin-id": "Sprite",
+	"sid": 416615175714667,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1000,
+						"height": 1000,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4686408,
+						"collisionPoly": {
+							"points": [
+								0.65,
+								0.07,
+								0.81,
+								0.52,
+								0.8,
+								0.8,
+								0.73,
+								0.86,
+								0.27,
+								0.87,
+								0.24,
+								0.83,
+								0.23,
+								0.43,
+								0.35,
+								0.09
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 315775170789523,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
