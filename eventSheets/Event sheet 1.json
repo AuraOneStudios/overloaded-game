@@ -114,9 +114,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 387898653013021,
+					"sid": 272511295225417,
 					"parameters": {
-						"interval-seconds": "0.3"
+						"interval-seconds": "Score >= 50 ? 0.1 : 0.3"
 					}
 				}
 			],
@@ -250,6 +250,14 @@
 					"behaviorType": "Bullet",
 					"parameters": {
 						"angle": "angle(Enemy_Lycan.X, Enemy_Lycan.Y, Char_Lizzie.X, Char_Lizzie.Y)"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "UI_HUD_Overpowered",
+					"sid": 500285398121303,
+					"parameters": {
+						"frame-number": "min(int(Score / 10), 5)"
 					}
 				}
 			],
