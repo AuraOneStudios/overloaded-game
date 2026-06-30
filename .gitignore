@@ -1,0 +1,5 @@
+*.uistate.json
+*uistate*
+ts-defs
+desktop.ini
+.DS_Store
