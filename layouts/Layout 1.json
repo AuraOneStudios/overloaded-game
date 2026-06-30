@@ -94,7 +94,7 @@
 					"type": "Enemy_Lycan",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Normal",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -103,12 +103,24 @@
 					"sid": 356222544487989,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 734,
-						"y": 339,
+						"x": 2166,
+						"y": -85,
 						"width": 61,
 						"height": 63,
 						"originX": 0.5,
@@ -136,12 +148,24 @@
 					"sid": 443921142583995,
 					"tags": "",
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 360,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 589,
-						"y": 335,
+						"x": 2126,
+						"y": 1522,
 						"width": 61,
 						"height": 63,
 						"originX": 0.5,

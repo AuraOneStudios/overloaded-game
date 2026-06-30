@@ -5,7 +5,13 @@
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 187043485936905
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -47,7 +53,52 @@
 					}
 				],
 				"sid": 448314531579329,
-				"name": "Animation 1",
+				"name": "Normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1000,
+						"height": 1000,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3099738,
+						"collisionPoly": {
+							"points": [
+								0.65,
+								0.07,
+								0.81,
+								0.52,
+								0.8,
+								0.8,
+								0.73,
+								0.86,
+								0.27,
+								0.87,
+								0.24,
+								0.83,
+								0.23,
+								0.43,
+								0.35,
+								0.09
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 463727108569225,
+				"name": "Furious",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

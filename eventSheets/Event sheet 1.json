@@ -124,25 +124,46 @@
 					}
 				},
 				{
-					"id": "set-angle-of-motion",
-					"objectClass": "Proj_Wrench",
-					"sid": 167490411780530,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "random(360)"
-					}
-				},
-				{
 					"id": "set-speed",
 					"objectClass": "Proj_Wrench",
-					"sid": 788648514722221,
+					"sid": 378872865065049,
 					"behaviorType": "Bullet",
 					"parameters": {
 						"speed": "400"
 					}
 				}
 			],
-			"sid": 890480686751269
+			"sid": 890480686751269,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "Enemy_Lycan",
+							"sid": 767698980972406,
+							"parameters": {
+								"which": "nearest",
+								"x": "Char_Lizzie.X",
+								"y": "Char_Lizzie.Y",
+								"pick-all-tied": false
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Proj_Wrench",
+							"sid": 695343491284036,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "angle(Char_Lizzie.X, Char_Lizzie.Y, Enemy_Lycan.X, Enemy_Lycan.Y)"
+							}
+						}
+					],
+					"sid": 606423230246527
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -201,6 +222,166 @@
 				}
 			],
 			"sid": 643430937848527
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 863579939818019
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "Enemy_Lycan",
+					"sid": 634629350687096,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "angle(Enemy_Lycan.X, Enemy_Lycan.Y, Char_Lizzie.X, Char_Lizzie.Y)"
+					}
+				}
+			],
+			"sid": 478447110569465
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 837632390990719,
+					"parameters": {
+						"interval-seconds": "0.8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 708771270788683,
+					"parameters": {
+						"object-to-create": "Enemy_Lycan",
+						"layer": "0",
+						"x": "Char_Lizzie.X + choose(-800, 800)",
+						"y": "Char_Lizzie.Y + random(-500, 500)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 963567771462189,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 836507099417756,
+							"parameters": {
+								"first-value": "random(100)",
+								"comparison": 2,
+								"second-value": "30"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy_Lycan",
+							"sid": 694386702530489,
+							"parameters": {
+								"animation": "\"Furious\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Enemy_Lycan",
+							"sid": 261775745403136,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "360"
+							}
+						}
+					],
+					"sid": 357026764462595
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Proj_Wrench",
+					"sid": 930065877439846,
+					"parameters": {
+						"object": "Enemy_Lycan"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemy_Lycan",
+					"sid": 586114262620415
+				}
+			],
+			"sid": 531245180972642
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Enemy_Lycan",
+					"sid": 775654516965918,
+					"parameters": {
+						"comparison": 4,
+						"x-co-ordinate": "Char_Lizzie.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Enemy_Lycan",
+					"sid": 704106843980704,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 737188875062705
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Enemy_LycanFurious",
+					"sid": 840173781654648,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "Char_Lizzie.X"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Enemy_LycanFurious",
+					"sid": 362665275378315,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 158222095087546
 		}
 	],
 	"sid": 984714394744369
