@@ -25,9 +25,9 @@
 				{
 					"id": "set-animation",
 					"objectClass": "Char_Lizzie",
-					"sid": 646397746187567,
+					"sid": 134714822932958,
 					"parameters": {
-						"animation": "\"Walk\"",
+						"animation": "Char_Lizzie.IsOverloaded ? \"ArchieWalk\" : \"Walk\"",
 						"from": "beginning"
 					}
 				}
@@ -461,6 +461,38 @@
 				}
 			],
 			"sid": 986341585583904
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 971853463172602,
+					"parameters": {
+						"variable": "Score",
+						"comparison": 5,
+						"value": "50"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 351977942537402
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Char_Lizzie",
+					"sid": 361854806420754,
+					"parameters": {
+						"instance-variable": "IsOverloaded",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 676809822085410
 		}
 	],
 	"sid": 984714394744369

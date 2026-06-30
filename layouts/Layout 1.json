@@ -51,7 +51,9 @@
 					"uid": 3,
 					"sid": 310717577884461,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"IsOverloaded": false
+					},
 					"behaviors": {
 						"8Direction": {
 							"properties": {
