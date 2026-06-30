@@ -141,6 +141,20 @@
 					"parameters": {
 						"speed": "400"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 705369068703124,
+					"parameters": {
+						"audio-file": {
+							"path": "shoot"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 890480686751269,
@@ -356,6 +370,20 @@
 						"variable": "Score",
 						"value": "1"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 256128824618881,
+					"parameters": {
+						"audio-file": {
+							"path": "hit"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 531245180972642
@@ -489,6 +517,20 @@
 					"parameters": {
 						"instance-variable": "IsOverloaded",
 						"value": "true"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 638711178604556,
+					"parameters": {
+						"audio-file": {
+							"path": "overload"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
