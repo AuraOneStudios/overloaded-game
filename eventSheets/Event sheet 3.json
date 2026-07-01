@@ -32,6 +32,68 @@
 				}
 			],
 			"sid": 919350212745002
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 708803477117623,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextYes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 465969897919933,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 623385416396452
+				}
+			],
+			"sid": 428592798164579
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 808295952948411,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextNo"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 237300743472009
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 757446455107198,
+					"parameters": {
+						"layout": "StartScreen"
+					}
+				}
+			],
+			"sid": 675016118848028
 		}
 	],
 	"sid": 917424654052896

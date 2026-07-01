@@ -1,0 +1,52 @@
+{
+	"name": "ExitButtom",
+	"plugin-id": "Sprite",
+	"sid": 184529354004442,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1200,
+						"height": 400,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2584001,
+						"collisionPoly": {
+							"points": [
+								0.13333333333333333,
+								0.15,
+								0.7666666666666667,
+								0.175,
+								0.7583333333333333,
+								0.65,
+								0.125,
+								0.625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 854681214566757,
+				"name": "ExitGame",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

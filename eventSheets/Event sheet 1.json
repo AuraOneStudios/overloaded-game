@@ -687,25 +687,173 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 710366548726889,
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 331225272727129,
 					"parameters": {
-						"key": 27
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextNo"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "set-time-scale",
 					"objectClass": "System",
-					"sid": 271902777369408,
+					"sid": 755571884921515,
 					"parameters": {
-						"layout": "StartScreen"
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ExitButtom",
+					"sid": 794520743840106,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextYes",
+					"sid": 541040446864947,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextCar",
+					"sid": 908787018598240,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TextNo",
+					"sid": 937224272562531,
+					"parameters": {
+						"visibility": "invisible"
 					}
 				}
 			],
-			"sid": 876820596477450
+			"sid": 158003411798845
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 820749237611698,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextYes"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 470701201741282
+				}
+			],
+			"sid": 271236469939820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 465648224287888,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [],
+			"sid": 393968917614571,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "ExitButtom",
+							"sid": 229955683904087
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 973737581320635,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TextYes",
+							"sid": 531054012560257,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TextCar",
+							"sid": 403240749291118,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TextNo",
+							"sid": 349113076718660,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ExitButtom",
+							"sid": 935653080155627,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 332802816531072
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 952525550627611
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 556443484507019,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 926425374002904
+				}
+			]
 		}
 	],
 	"sid": 984714394744369

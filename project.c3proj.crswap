@@ -1,0 +1,350 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 48703,
+	"name": "OVERLOADED",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "lo9kp3a3v7q",
+	"objectTypes": {
+		"items": [
+			"Map1",
+			"Char_Lizzie",
+			"Keyboard",
+			"Enemy_Lycan",
+			"Enemy_LycanFurious",
+			"UI_HUD_Overpowered",
+			"Proj_Wrench",
+			"Audio",
+			"Sprite",
+			"StartButtom",
+			"Mouse",
+			"ExitButtom",
+			"TextYes",
+			"TextNo",
+			"TextCar",
+			"Browser"
+		],
+		"subfolders": []
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"GamePlay",
+			"StartScreen",
+			"GameOver"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Event sheet 1",
+			"Event sheet 2",
+			"Event sheet 3"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "hit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 428618288555627,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "howl.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 201408293147513,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shoot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 747300740338084,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "overload.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 904426562668500,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "overload.wav",
+					"type": "audio/wav",
+					"sid": 862355302554326,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "game_bgm.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 866861381049480,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "abyss_of_deeds.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 790824416677709,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "game_bgm.wav",
+					"type": "audio/wav",
+					"sid": 615515108579034,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 761639697282712,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 466400500899304,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 194292620037725,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 596578538905730,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 283353254012466,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 206625143308615,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 829273372371784,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"models3d": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "0.1.30.15",
+		"autoIncrementVersion": true,
+		"author": "AuraOne Studios",
+		"authorEmail": "fabiomendesilva@gmail.com",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"zAxisScale": "regular",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"fixedFramerate": 30,
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": "StartScreen"
+}
