@@ -1,0 +1,45 @@
+name: Security Checks
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * 0' # Run weekly on Sunday
+
+jobs:
+  secret-scanning:
+    name: Secret Scanning (Gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # Necessary for gitleaks to scan all commits
+      
+      - name: Run TruffleHog
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ""
+          head: ""
+          extra_args: "--only-verified"
+
+  sast-python:
+    name: SAST (Bandit for Python)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+          
+      - name: Install Bandit
+        run: pip install bandit
+        
+      - name: Run Bandit
+        run: bandit -r . -f custom --exclude .venv

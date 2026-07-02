@@ -43,7 +43,7 @@ def generate_hit():
         env = math.exp(-t * 20)
         
         # Noise for crunch
-        noise = random.uniform(-1, 1)
+        noise = random.uniform(-1, 1)  # nosec B311
         
         # Metallic ringing
         ring1 = math.sin(2 * math.pi * 1200 * t) * math.exp(-t * 15)
@@ -75,7 +75,7 @@ def generate_howl():
         sub = math.sin(2 * math.pi * (freq / 2.0) * t)
         
         # White noise for mechanical hiss
-        noise = random.uniform(-1, 1) * 0.2
+        noise = random.uniform(-1, 1) * 0.2  # nosec B311
         
         # Envelope
         if t < 0.2: env = t / 0.2
