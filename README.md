@@ -1,6 +1,6 @@
 # OVERLOADED 🐺🤖
 
-![Lizzie Idle](./images/char_lizzie-idle-000.png) ![Lizzie Walk](./images/char_lizzie-walk-001.png)
+<img src="./images/char_lizzie-idle-000.png" width="150" alt="Lizzie Idle"> <img src="./images/char_lizzie-walk-001.png" width="150" alt="Lizzie Walk">
 
 **OVERLOADED** is a 2D top-down *Roguelite Horde Survivor* game, developed in Construct 3 for the **CrazyGames x Construct Game Jam**. 
 
