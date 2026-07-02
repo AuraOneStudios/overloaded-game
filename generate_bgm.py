@@ -45,7 +45,7 @@ def generate_industrial_bgm(filename, duration=32.0, sample_rate=44100):
             # FM Synthesis for metallic sound
             mod = math.sin(2 * math.pi * 800 * snare_t)
             car = math.sin(2 * math.pi * (300 + 400 * mod) * snare_t)
-            noise = random.uniform(-1, 1)
+            noise = random.uniform(-1, 1)  # nosec B311
             snare = (car * 0.6 + noise * 0.4) * snare_env * 0.5
         else:
             snare = 0
@@ -54,7 +54,7 @@ def generate_industrial_bgm(filename, duration=32.0, sample_rate=44100):
         hihat_t = t % sixteenth_duration
         if (sixteenth_idx % 4) != 0: # Off-beats
             hihat_env = math.exp(-hihat_t * 40)
-            hihat = random.uniform(-1, 1) * hihat_env * 0.15
+            hihat = random.uniform(-1, 1) * hihat_env * 0.15  # nosec B311
         else:
             hihat = 0
             
