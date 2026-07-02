@@ -1,0 +1,27 @@
+[config]
+# Responder em Português-BR para facilitar o entendimento
+response_language = "pt-BR"
+
+[github_app]
+# Eventos que o Qodo App (PR-Agent) deve responder automaticamente
+handle_pr_actions = ['opened', 'reopened', 'ready_for_review', 'synchronize']
+
+[pr_reviewer]
+# Personaliza as revisões de código
+extra_instructions = """
+- Foque em segurança (DevSecOps) garantindo que nenhum token, senha ou chave secreta foi esquecido no código.
+- Se houver mudanças nos scripts Python (generate_bgm.py ou generate_sounds.py), verifique se os padrões e ritmos industriais se mantêm.
+- Seja objetivo e construtivo.
+"""
+require_score_review = false
+require_tests_review = false
+
+[pr_description]
+# Opcional: Atribuir labels automaticamente e publicar a descrição no PR
+publish_labels = true
+
+[pr_code_suggestions]
+# Focar em boas práticas e segurança
+extra_instructions = """
+- Sugira melhorias que foquem em otimização de performance ou segurança.
+"""
