@@ -1,36 +1,36 @@
 # OVERLOADED 🐺🤖
 
-![Lizzie Idle](./images/sprite2-idle-000.png) ![Lizzie Walk](./images/sprite2-walk-001.png)
+![Lizzie Idle](./images/char_lizzie-idle-000.png) ![Lizzie Walk](./images/char_lizzie-walk-001.png)
 
-**OVERLOADED** é um jogo do gênero *Roguelite Horde Survivor* top-down 2D, desenvolvido no Construct 3 para a **CrazyGames x Construct Game Jam**. 
+**OVERLOADED** is a 2D top-down *Roguelite Horde Survivor* game, developed in Construct 3 for the **CrazyGames x Construct Game Jam**. 
 
-## 📖 A História
+## 📖 The Story
 
-Em um mundo caótico onde engrenagens e óleo ditam as regras da sobrevivência, conheça **Lizzie**, uma loba engenheira extremamente habilidosa, mecânica e destemida. Ela nunca entra em uma briga desarmada, utilizando sua inseparável Chave de Boca (Wrench Boomerang) para manter os inimigos à distância.
+In a chaotic world where gears and oil dictate the rules of survival, meet **Lizzie**, an extremely skilled, fearless engineer and mechanic wolf. She never goes into a fight unarmed, using her inseparable Wrench Boomerang to keep enemies at a distance.
 
-Mas o verdadeiro poder de Lizzie se revela no momento crítico. Quando as baterias inimigas são drenadas e ela atinge o limite da exaustão, sua invenção máxima entra em cena: **Archie**, um robô gigante de combate. 
+But Lizzie's true power is revealed in the critical moment. When enemy batteries are drained and she reaches the limit of exhaustion, her ultimate invention comes into play: **Archie**, a giant combat robot. 
 
-Montada em Archie, Lizzie se torna literalmente **OVERPOWERED** (Sobrecarga), trucidando hordas inteiras com tiros de canhão e atropelamentos brutais.
+Riding Archie, Lizzie literally becomes **OVERPOWERED**, slaughtering entire hordes with cannon shots and brutal trampling.
 
-## 🎮 Jogabilidade (Gameplay)
+## 🎮 Gameplay
 
-O jogo foca em uma experiência fluida, frenética e extremamente recompensadora. O Core Loop consiste em:
-- **Sobrevivência Padrão:** O jogador controla Lizzie (movimentação em 8 direções isométricas). Ela ataca automaticamente inimigos próximos lançando sua Chave de Boca como um bumerangue.
-- **Acúmulo de Energia:** Cada inimigo derrotado preenche a barra de *Sobrecarga*. A tela acompanha a evolução do perigo e tensão.
-- **Modo Sobrecarga (OVERPOWERED):** Ao abater 50 inimigos, a barra atinge 100%. Lizzie chama Archie. O controle e o visual do personagem mudam instantaneamente. O jogador ganha novas habilidades devastadoras, como o *Recoil Cannon* e a habilidade de esmagar (Trample) inimigos correndo por cima deles. Inimigos ficam enfurecidos, mas você está... sobrecarregado!
+The game focuses on a fluid, frantic, and extremely rewarding experience. The Core Loop consists of:
+- **Standard Survival:** The player controls Lizzie (8-direction isometric movement). She automatically attacks nearby enemies by throwing her Wrench like a boomerang.
+- **Energy Accumulation:** Every defeated enemy fills the *Overload* bar. The screen tracks the evolution of danger and tension.
+- **Overload Mode (OVERPOWERED):** Upon taking down 50 enemies, the bar reaches 100%. Lizzie summons Archie. The character's controls and visuals change instantly. The player gains devastating new abilities, such as the *Recoil Cannon* and the ability to trample enemies by running over them. Enemies become furious, but you are... overpowered!
 
-## 🚀 Motivação (Crazy Web Game Jam)
+## 🚀 Motivation (Crazy Web Game Jam)
 
-Nossa motivação principal para participar da **CrazyGames x Construct Game Jam** é abraçar de cabeça o tema "OVERPOWERED" e traduzi-lo na sensação mais pura de gameplay. 
+Our main motivation for participating in the **CrazyGames x Construct Game Jam** is to dive headfirst into the "OVERPOWERED" theme and translate it into the purest sensation of gameplay. 
 
-Em jogos de horda, passar minutos fugindo cria uma tensão que precisa ser liberada. Quisemos pegar o conceito de "ficar forte" e elevar à décima potência com a transição entre a mecânica de sobrevivência tática de Lizzie e o poder absoluto (Overpowered) de Archie.
+In horde games, spending minutes running away builds a tension that needs to be released. We wanted to take the concept of "getting strong" and elevate it to the nth degree with the transition between Lizzie's tactical survival mechanics and Archie's absolute power (Overpowered).
 
-Além disso, a oportunidade de desenvolver exclusivamente em **Construct 3** focando em web (HTML5) para rodar na plataforma da CrazyGames nos inspirou a aplicar técnicas de otimização pesadas, pixel art estilizado em Letterbox 16:9 (como recomendado nas guidelines da jam) e criar uma experiência focada na diversão e retenção, visando os critérios de **Fun**, **Visual** e **Innovation**.
+Furthermore, the opportunity to develop exclusively in **Construct 3** focusing on the web (HTML5) to run on the CrazyGames platform inspired us to apply heavy optimization techniques, stylized pixel art in 16:9 Letterbox (as recommended in the jam guidelines), and create an experience focused on fun and retention, targeting the criteria of **Fun**, **Visual**, and **Innovation**.
 
-Temos orgulho de criar um jogo divertido, com mecânicas sólidas e que proporciona aos jogadores a incrível sensação de invencibilidade que o tema pede.
+We are proud to create a fun game with solid mechanics that provides players with the incredible feeling of invincibility the theme calls for.
 
 ---
-*Desenvolvido por AuraOneStudios*
+*Developed by AuraOneStudios*
 
 ## License
 
