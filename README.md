@@ -31,3 +31,10 @@ Temos orgulho de criar um jogo divertido, com mecânicas sólidas e que proporci
 
 ---
 *Desenvolvido por AuraOneStudios*
+
+## License
+
+This repository uses split licensing:
+
+- **Code** (engine logic, scripts, tooling) is licensed under [MIT](./LICENSE) — free to use, modify, and redistribute.
+- **Art, character designs, audio, and the OVERLOADED name/logo** under [`/assets`](./assets) are **all rights reserved** — see [`assets/LICENSE`](./assets/LICENSE). No reuse or redistribution is permitted without written consent from AuraOne Studios.
