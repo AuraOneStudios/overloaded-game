@@ -1,0 +1,16 @@
+﻿name: Create PRs as Bot
+on:
+  push:
+    branches:
+      - chore/bot-prs
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create PRs
+        run: |
+          gh pr create --base develop --head bugfix/fix-landing-image --title "bugfix(docs): replace AI concept art with original sprite" --body "This PR was automatically recreated by github-actions[bot]." || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
