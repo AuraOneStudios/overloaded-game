@@ -30,11 +30,11 @@ Furthermore, the opportunity to develop exclusively in **Construct 3** focusing 
 We are proud to create a fun game with solid mechanics that provides players with the incredible feeling of invincibility the theme calls for.
 
 ---
-*Developed by AuraOneStudios*
+*Developed by AuraOne Studios®*
 
 ## License
 
 This repository uses split licensing:
 
 - **Code** (engine logic, scripts, tooling) is licensed under [MIT](./LICENSE) — free to use, modify, and redistribute.
-- **Art, character designs, audio, and the OVERLOADED name/logo** under [`/assets`](./assets) are **all rights reserved** — see [`assets/LICENSE`](./assets/LICENSE). No reuse or redistribution is permitted without written consent from AuraOne Studios.
+- **Art, character designs, audio, and the OVERLOADED name/logo** under [`/assets`](./assets) are **all rights reserved** — see [`assets/LICENSE`](./assets/LICENSE). No reuse or redistribution is permitted without written consent from AuraOne Studios®.
