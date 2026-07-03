@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Create PRs
         run: |
-          gh pr create --base develop --head chore/clean-docs-images --title "chore(docs): clean up unused development images from landing page" --body "This PR was automatically recreated by github-actions[bot]." || true
+          gh pr create --base develop --head feature/combat-and-menus --title "feat: implement horde scaling and decouple pause menu UI" --body "This PR was automatically recreated by github-actions[bot]." || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
