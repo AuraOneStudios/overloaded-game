@@ -85,10 +85,12 @@
 			"StartButtom",
 			"Mouse",
 			"ExitButtom",
-			"TextYes",
-			"TextNo",
-			"TextCar",
-			"Browser"
+			"PauseTextNo",
+			"PauseTextYes",
+			"Browser",
+			"Text",
+			"Text2",
+			"Text3"
 		],
 		"subfolders": []
 	},
@@ -165,7 +167,7 @@
 				{
 					"name": "hit.wav",
 					"type": "audio/wav",
-					"sid": 684272500130187,
+					"sid": 805375113608432,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -173,7 +175,7 @@
 				{
 					"name": "shoot.wav",
 					"type": "audio/wav",
-					"sid": 336836199670577,
+					"sid": 680616584707334,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -181,7 +183,7 @@
 				{
 					"name": "howl.wav",
 					"type": "audio/wav",
-					"sid": 711029983095570,
+					"sid": 950178083967940,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -218,7 +220,7 @@
 				{
 					"name": "abyss_of_deeds.wav",
 					"type": "audio/wav",
-					"sid": 724866226175656,
+					"sid": 175452114428521,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -323,7 +325,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1.30.18",
+		"version": "0.1.30.17",
 		"autoIncrementVersion": true,
 		"author": "AuraOne Studios",
 		"authorEmail": "fabiomendesilva@gmail.com",
