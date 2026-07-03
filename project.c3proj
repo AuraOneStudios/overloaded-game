@@ -85,10 +85,12 @@
 			"StartButtom",
 			"Mouse",
 			"ExitButtom",
-			"TextYes",
-			"TextNo",
-			"TextCar",
-			"Browser"
+			"PauseTextNo",
+			"PauseTextYes",
+			"Browser",
+			"Text",
+			"Text2",
+			"Text3"
 		],
 		"subfolders": []
 	},
@@ -161,6 +163,30 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "hit.wav",
+					"type": "audio/wav",
+					"sid": 805375113608432,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shoot.wav",
+					"type": "audio/wav",
+					"sid": 680616584707334,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "howl.wav",
+					"type": "audio/wav",
+					"sid": 950178083967940,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -187,6 +213,14 @@
 					"name": "game_bgm.wav",
 					"type": "audio/wav",
 					"sid": 615515108579034,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "abyss_of_deeds.wav",
+					"type": "audio/wav",
+					"sid": 175452114428521,
 					"file-info": {
 						"purpose": "none"
 					}
