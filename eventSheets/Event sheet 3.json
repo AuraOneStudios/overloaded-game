@@ -43,7 +43,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "TextYes"
+						"object-clicked": "PauseTextNo"
 					}
 				}
 			],
@@ -74,7 +74,7 @@
 					"parameters": {
 						"mouse-button": "left",
 						"click-type": "clicked",
-						"object-clicked": "TextNo"
+						"object-clicked": "PauseTextYes"
 					}
 				}
 			],
