@@ -285,11 +285,11 @@
 					}
 				},
 				{
-					"type": "TextYes",
+					"type": "PauseTextYes",
 					"properties": {
 						"text": "SIM",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "MV Boli",
 						"size": 28,
 						"line-height": 0,
 						"bold": false,
@@ -309,18 +309,18 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 13,
-					"sid": 881130648105567,
+					"uid": 15,
+					"sid": 684344024072186,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 446,
-						"y": 473,
-						"width": 76,
-						"height": 49,
+						"x": 509,
+						"y": 451,
+						"width": 84,
+						"height": 42,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -334,11 +334,11 @@
 					}
 				},
 				{
-					"type": "TextNo",
+					"type": "PauseTextNo",
 					"properties": {
 						"text": "NÃO",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "MV Boli",
 						"size": 28,
 						"line-height": 0,
 						"bold": false,
@@ -359,66 +359,17 @@
 						"read-aloud": false
 					},
 					"uid": 14,
-					"sid": 189577609649370,
+					"sid": 284151948064039,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 620,
-						"y": 476,
-						"width": 84,
-						"height": 42,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"z": 0,
-						"angle": 0
-					}
-				},
-				{
-					"type": "TextCar",
-					"properties": {
-						"text": "/",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 36,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": false,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 15,
-					"sid": 126586966394978,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 554,
-						"y": 468,
-						"width": 26,
-						"height": 59,
+						"x": 632,
+						"y": 452,
+						"width": 89,
+						"height": 49,
 						"originX": 0,
 						"originY": 0,
 						"color": [

@@ -1,0 +1,10 @@
+{
+	"name": "PauseTextNo",
+	"plugin-id": "Text",
+	"sid": 250361240378550,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
