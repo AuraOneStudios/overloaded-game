@@ -1,0 +1,31 @@
+name: Qodo (PR-Agent) Code Review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  pr_agent_job:
+    if: ${{ github.event.sender.type != 'Bot' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: write
+    name: Run Qodo PR-Agent
+    steps:
+      - id: pragent
+        uses: the-pr-agent/pr-agent@main
+        env:
+          # Para usar via GitHub Action, você precisa de uma chave de API (OpenAI ou Anthropic)
+          # configurada nos Secrets do seu repositório.
+          # Se preferir usar a versão gratuita e gerenciada (sem usar sua API Key), 
+          # você precisa se cadastrar no Qodo e conectar seu repositório por lá:
+          # https://www.qodo.ai/get-started/
+          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_action_config.auto_review: "true"
+          github_action_config.auto_describe: "true"
+          github_action_config.auto_improve: "true"
