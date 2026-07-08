@@ -9,7 +9,9 @@ jobs:
   create-pr-to-develop:
     name: Create Merge PR to Develop
     runs-on: ubuntu-latest
-    if: github.actor != 'github-actions[bot]' && contains(github.event.head_commit.message, 'chore: auto-sync') == false
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      !contains(github.event.head_commit.message, 'chore: auto-sync')
     permissions:
       contents: write
       pull-requests: write
