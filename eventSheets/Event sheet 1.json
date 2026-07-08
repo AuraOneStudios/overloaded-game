@@ -283,7 +283,7 @@
 								"loop": "looping",
 								"volume": "0",
 								"stereo-pan": "0",
-								"tag-optional": "\"plasma_move\""
+								"tag-optional": "\"plasma_move_\" & Proj_PlasmBall.UID"
 							}
 						}
 					],
@@ -1189,7 +1189,7 @@
 					"objectClass": "Audio",
 					"sid": 216743903610869,
 					"parameters": {
-						"tag": "\"plasma_move\""
+						"tag": "\"plasma_move_\" & Proj_PlasmBall.UID"
 					}
 				},
 				{
@@ -1211,7 +1211,7 @@
 					"objectClass": "Audio",
 					"sid": 761842338945735,
 					"parameters": {
-						"tag": "\"plasma_idle\""
+						"tag": "\"plasma_idle_\" & Proj_PlasmBall.UID"
 					}
 				}
 			],

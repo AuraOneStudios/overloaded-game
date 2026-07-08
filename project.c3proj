@@ -366,7 +366,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1.30.19",
+		"version": "0.1.30.20",
 		"autoIncrementVersion": true,
 		"author": "AuraOne Studios",
 		"authorEmail": "fabiomendesilva@gmail.com",
