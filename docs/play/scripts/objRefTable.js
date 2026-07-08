@@ -25,6 +25,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
 		C3.Behaviors.EightDir.Exps.MovingAngle,
 		C3.Plugins.Sprite.Acts.MoveForward,
+		C3.Plugins.Sprite.Exps.UID,
 		C3.Plugins.Sprite.Cnds.IsMirrored,
 		C3.Plugins.System.Cnds.Else,
 		C3.Behaviors.Bullet.Cnds.CompareTravelled,

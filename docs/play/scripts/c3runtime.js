@@ -1406,7 +1406,10 @@ self.C3_ExpressionFuncs = [
 			return () => n0.ExpBehavior();
 		},
 		() => 20,
-		() => "plasma_move",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("plasma_move_", n0.ExpObject());
+		},
 		() => 180,
 		() => 600,
 		() => 100,
@@ -1448,7 +1451,10 @@ self.C3_ExpressionFuncs = [
 		() => 0.3,
 		() => 0.05,
 		() => 1.5,
-		() => "plasma_idle",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => and("plasma_idle_", n0.ExpObject());
+		},
 		() => "MusicMenu"
 ];
 
