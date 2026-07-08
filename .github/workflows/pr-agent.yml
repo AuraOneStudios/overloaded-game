@@ -3,8 +3,6 @@ name: Qodo (PR-Agent) Code Review
 on:
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review]
-  issue_comment:
-    types: [created, edited]
 
 jobs:
   pr_agent_job:
