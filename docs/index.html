@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OVERLOADED | AuraOne Studios&reg;</title>
+    
+    <meta name="description" content="OVERLOADED - A top-down horde survivor game featuring Lizzie and Archie. Uncover the mystery and manage the permanent overload." class="en">
+    <meta name="description" content="OVERLOADED - Um jogo top-down de sobrevivência com Lizzie e Archie. Desvende o mistério e domine a sobrecarga permanente." class="pt">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://auraonestudios.com/">
+    <meta property="og:title" content="OVERLOADED | AuraOne Studios">
+    <meta property="og:description" content="A top-down horde survivor featuring Lizzie and Archie. Uncover the mystery, manage the overload.">
+    <meta property="og:image" content="https://auraonestudios.com/images/sprite-start-000.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://auraonestudios.com/">
+    <meta property="twitter:title" content="OVERLOADED | AuraOne Studios">
+    <meta property="twitter:description" content="A top-down horde survivor featuring Lizzie and Archie. Uncover the mystery, manage the overload.">
+    <meta property="twitter:image" content="https://auraonestudios.com/images/sprite-start-000.png">
+    
+    <link rel="icon" type="image/png" href="./images/sprite-start-000.png">
+
+    <!-- Analytics Placeholder -->
+    <!-- <script defer data-domain="auraonestudios.com" src="https://plausible.io/js/script.js"></script> -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "OVERLOADED",
+      "author": {
+        "@type": "Organization",
+        "name": "AuraOne Studios"
+      },
+      "genre": "Top-down Horde Survivor",
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game"
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -165,7 +203,10 @@
         .btn-primary {
             background-color: var(--accent-color);
             color: #fff;
-            box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3);
+            box-shadow: 0 0 25px rgba(255, 51, 102, 0.6);
+            font-weight: 800;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
         }
 
         .btn-primary:hover {
@@ -249,6 +290,61 @@
         body.lang-en span.en { display: inline; }
         body.lang-pt span.pt { display: inline; }
 
+        section {
+            padding: 5rem 5%;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            text-align: left;
+            background: rgba(15, 17, 21, 0.6);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            margin-top: 2rem;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #a0aec0;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .media-showcase video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .team-credits {
+            margin-top: 4rem;
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
+
     </style>
 </head>
 <body class="lang-en">
@@ -269,7 +365,7 @@
         <h1>OVERLOADED</h1>
         
         <p class="subtitle en">A proprietary journey featuring Lizzie and Archie. Uncover the mystery, manage the overload.</p>
-        <p class="subtitle pt">Uma jornada proprietária com Lizzie e Archie. Desvende o mistério, controle a sobrecarga.</p>
+        <p class="subtitle pt">Uma saga exclusiva com Lizzie e Archie. Desvende o mistério, domine a sobrecarga.</p>
         
         <div class="cta-container">
             <a href="./play/" class="btn btn-primary">
@@ -284,14 +380,41 @@
 
         <div class="characters">
             <div class="character-showcase">
-                <img src="./images/char_lizzie-idle-000.png" alt="Lizzie">
+                <img src="./images/char_lizzie-idle-000.png" alt="Lizzie, the main protagonist" loading="lazy">
                 <div class="char-pill">Lizzie</div>
             </div>
             <div class="character-showcase archie">
-                <img src="./images/char_lizzie-archiewalk-000.png" alt="Archie">
+                <img src="./images/char_archie-idle-000.png" alt="Archie, Lizzie's robotic companion" loading="lazy">
                 <div class="char-pill">Archie</div>
             </div>
         </div>
+        
+        <section id="about">
+            <div class="about-grid">
+                <div class="media-showcase">
+                    <video autoplay loop muted playsinline loading="lazy">
+                        <source src="./images/gameplay_loop.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="about-text">
+                    <h2>
+                        <span class="en">The Game</span>
+                        <span class="pt">O Jogo</span>
+                    </h2>
+                    <p class="en">OVERLOADED is a fast-paced top-down horde survivor. Play as Lizzie, accompanied by her robotic ally Archie, as you fight through endless waves of enemies.</p>
+                    <p class="pt">OVERLOADED é um jogo de sobrevivência top-down frenético. Jogue como Lizzie, acompanhada pelo seu aliado robótico Archie, enquanto luta contra hordas infinitas de inimigos.</p>
+                    
+                    <p class="en">Embrace the permanent Overload mode&mdash;a high-stakes state that pushes your limits but never resets. There is no going back once you trigger the overload. Survive as long as you can.</p>
+                    <p class="pt">Abrace o modo Sobrecarga permanente&mdash;um estado de alto risco que testa seus limites e não tem volta. Não há como reverter a sobrecarga. Sobreviva o máximo que puder.</p>
+                </div>
+            </div>
+            
+            <div class="team-credits">
+                <p class="en">AuraOne Studios is a passionate 2-person indie team dedicated to crafting unique, original IPs.</p>
+                <p class="pt">AuraOne Studios é uma equipe indie de 2 pessoas dedicada a criar propriedades intelectuais originais e únicas.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
