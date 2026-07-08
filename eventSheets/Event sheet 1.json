@@ -206,6 +206,179 @@
 						}
 					],
 					"sid": 606423230246527
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Char_Lizzie",
+							"sid": 340701828421993,
+							"parameters": {
+								"instance-variable": "IsOverloaded"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Char_Lizzie",
+							"sid": 339564453420885,
+							"parameters": {
+								"object": "Proj_PlasmBall",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "Proj_PlasmBall",
+							"sid": 429056832622347,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "Char_Lizzie.8Direction.MovingAngle"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Proj_PlasmBall",
+							"sid": 847889560826939,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "400"
+							}
+						},
+						{
+							"id": "move-forward",
+							"objectClass": "Proj_PlasmBall",
+							"sid": 471369162076021,
+							"parameters": {
+								"distance": "20"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 276978134237909,
+							"parameters": {
+								"audio-file": {
+									"path": "plasma_cannon"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 977603556889779,
+							"parameters": {
+								"audio-file": {
+									"path": "plasma_move"
+								},
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"plasma_move\""
+							}
+						}
+					],
+					"sid": 149969403736480,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Char_Lizzie",
+									"sid": 971013367257542
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Proj_PlasmBall",
+									"sid": 168624288439838,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 705563030846618
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 159248412448297
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Proj_PlasmBall",
+									"sid": 332166901877564,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 501806549711683
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving",
+									"objectClass": "Char_Lizzie",
+									"sid": 115190853566704,
+									"behaviorType": "8Direction"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Proj_PlasmBall",
+									"sid": 423335207176957,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "Char_Lizzie.8Direction.MovingAngle"
+									}
+								}
+							],
+							"sid": 241567063239856
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 276187458028377
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "Proj_PlasmBall",
+									"sid": 902654136845401,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "0"
+									}
+								}
+							],
+							"sid": 858978017352895
+						}
+					]
 				}
 			]
 		},
@@ -717,28 +890,9 @@
 					}
 				},
 				{
-					"id": "set-visible",
-					"objectClass": "ExitButtom",
-					"sid": 794520743840106,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "PauseTextNo",
-					"sid": 541040446864947,
-					"parameters": {
-						"visibility": "invisible"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "PauseTextYes",
-					"sid": 937224272562531,
-					"parameters": {
-						"visibility": "invisible"
-					}
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 224887379585659
 				}
 			],
 			"sid": 158003411798845
@@ -759,9 +913,36 @@
 			],
 			"actions": [
 				{
-					"id": "close",
-					"objectClass": "Browser",
-					"sid": 470701201741282
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 172785005170348,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ExitButtom",
+					"sid": 973626780064823,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PauseTextNo",
+					"sid": 512846966192910,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PauseTextYes",
+					"sid": 134370806237883,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
 			"sid": 271236469939820
@@ -907,6 +1088,134 @@
 				}
 			],
 			"sid": 232047324319461
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Proj_PlasmBall",
+					"sid": 626919945724185,
+					"parameters": {
+						"object": "Enemy_Lycan"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemy_Lycan",
+					"sid": 440588643867426
+				}
+			],
+			"sid": 512590914338029
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Proj_PlasmBall",
+					"sid": 424970401128537,
+					"parameters": {
+						"object": "Enemy_LycanFurious"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemy_LycanFurious",
+					"sid": 993226029891685
+				}
+			],
+			"sid": 374691559398931
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 279195554200514,
+					"parameters": {
+						"key": 79
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Char_Lizzie",
+					"sid": 517593171515217,
+					"parameters": {
+						"instance-variable": "IsOverloaded",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 118755962165486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Proj_PlasmBall",
+					"sid": 459052595343295
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 240471657904790,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Proj_PlasmBall",
+					"sid": 243992651343057,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 216743903610869,
+					"parameters": {
+						"tag": "\"plasma_move\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 822529058306911,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Proj_PlasmBall",
+					"sid": 517452044902968
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 761842338945735,
+					"parameters": {
+						"tag": "\"plasma_idle\""
+					}
+				}
+			],
+			"sid": 348418932100240
 		}
 	],
 	"sid": 984714394744369

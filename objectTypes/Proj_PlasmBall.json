@@ -1,0 +1,76 @@
+{
+	"name": "Proj_PlasmBall",
+	"plugin-id": "Sprite",
+	"sid": 745156833971156,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 476243048931236
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9476590,
+						"collisionPoly": {
+							"points": [
+								0.3,
+								0,
+								0.65,
+								0,
+								0.75,
+								0.05,
+								1,
+								0.3,
+								1,
+								0.65,
+								0.95,
+								0.8,
+								0.85,
+								0.9,
+								0.7,
+								1,
+								0.3,
+								1,
+								0.2,
+								0.95,
+								0,
+								0.75,
+								0,
+								0.25,
+								0.15,
+								0.1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 837997002899229,
+				"name": "plasm-ball",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

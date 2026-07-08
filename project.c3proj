@@ -90,7 +90,8 @@
 			"Browser",
 			"Text",
 			"Text2",
-			"Text3"
+			"Text3",
+			"Proj_PlasmBall"
 		],
 		"subfolders": []
 	},
@@ -187,6 +188,46 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "plasma_cannon.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 950474038073571,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "plasma_cannon.wav",
+					"type": "audio/wav",
+					"sid": 507979650565118,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "plasma_move.wav",
+					"type": "audio/wav",
+					"sid": 720573081913702,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "plasma_move.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 422451205565276,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "plasma_idle.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 930508473194013,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -202,7 +243,7 @@
 					}
 				},
 				{
-					"name": "abyss_of_deeds.webm",
+					"name": "game_startscreen.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 790824416677709,
 					"file-info": {
@@ -218,7 +259,7 @@
 					}
 				},
 				{
-					"name": "abyss_of_deeds.wav",
+					"name": "game_startscreen.wav",
 					"type": "audio/wav",
 					"sid": 175452114428521,
 					"file-info": {
@@ -325,7 +366,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1.30.17",
+		"version": "0.1.30.19",
 		"autoIncrementVersion": true,
 		"author": "AuraOne Studios",
 		"authorEmail": "fabiomendesilva@gmail.com",
