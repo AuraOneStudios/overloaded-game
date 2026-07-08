@@ -85,6 +85,14 @@
 					"sid": 237300743472009
 				},
 				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 455642049827209,
+					"parameters": {
+						"reset-static": false
+					}
+				},
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
 					"sid": 757446455107198,

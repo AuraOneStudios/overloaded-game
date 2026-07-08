@@ -22,6 +22,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
+		C3.Plugins.Sprite.Cnds.IsBoolInstanceVarSet,
+		C3.Behaviors.EightDir.Exps.MovingAngle,
+		C3.Plugins.Sprite.Acts.MoveForward,
+		C3.Plugins.Sprite.Cnds.IsMirrored,
+		C3.Plugins.System.Cnds.Else,
 		C3.Behaviors.Bullet.Cnds.CompareTravelled,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
@@ -47,12 +52,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.System.Acts.SetTimescale,
+		C3.Plugins.Browser.Acts.Close,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Plugins.Text.Acts.SetVisible,
-		C3.Plugins.Browser.Acts.Close,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Cnds.IsVisible,
-		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.Sprite.Cnds.OnCreated,
+		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Audio.Acts.Stop,
 		C3.Plugins.System.Acts.ResetGlobals,
 		C3.Plugins.Audio.Acts.StopAll
@@ -75,12 +81,16 @@ self.C3_JsPropNameTable = [
 	{StartButtom: 0},
 	{Mouse: 0},
 	{ExitButtom: 0},
-	{TextYes: 0},
-	{TextNo: 0},
-	{TextCar: 0},
+	{PauseTextNo: 0},
+	{PauseTextYes: 0},
 	{Browser: 0},
+	{Text: 0},
+	{Text2: 0},
+	{Text3: 0},
+	{Proj_PlasmBall: 0},
 	{Score: 0},
-	{Health: 0}
+	{Health: 0},
+	{SpawnRate: 0}
 ];
 
 self.InstanceType = {
@@ -96,8 +106,11 @@ self.InstanceType = {
 	StartButtom: class extends self.ISpriteInstance {},
 	Mouse: class extends self.IInstance {},
 	ExitButtom: class extends self.ISpriteInstance {},
-	TextYes: class extends self.ITextInstance {},
-	TextNo: class extends self.ITextInstance {},
-	TextCar: class extends self.ITextInstance {},
-	Browser: class extends self.IInstance {}
+	PauseTextNo: class extends self.ITextInstance {},
+	PauseTextYes: class extends self.ITextInstance {},
+	Browser: class extends self.IInstance {},
+	Text: class extends self.ITextInstance {},
+	Text2: class extends self.ITextInstance {},
+	Text3: class extends self.ITextInstance {},
+	Proj_PlasmBall: class extends self.ISpriteInstance {}
 }

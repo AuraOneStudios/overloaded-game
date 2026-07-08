@@ -2,6 +2,8 @@
 
 <img src="./images/char_lizzie-idle-000.png" width="150" alt="Lizzie Idle"> <img src="./images/char_lizzie-walk-001.png" width="150" alt="Lizzie Walk">
 
+**[🎮 Jogue Agora: OVERLOADED](https://auraonestudios.github.io/overloaded-game/)**
+
 **OVERLOADED** is a 2D top-down *Roguelite Horde Survivor* game, developed in Construct 3 for the **CrazyGames x Construct Game Jam**. 
 
 ## 📖 The Story

@@ -1382,7 +1382,9 @@ self.C3_ExpressionFuncs = [
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => ((((v0.GetValue()) >= (50) ? 1 : 0)) ? (0.1) : (0.3));
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => ((((v0.GetValue()) >= (50) ? 1 : 0)) ? ((v1.GetValue() + 0.5)) : ((v2.GetValue() + 1)));
 		},
 		() => 0,
 		() => "",
@@ -1399,6 +1401,13 @@ self.C3_ExpressionFuncs = [
 			const n3 = p._GetNode(3);
 			return () => C3.toDegrees(C3.angleTo(n0.ExpObject(), n1.ExpObject(), n2.ExpObject(), n3.ExpObject()));
 		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpBehavior();
+		},
+		() => 20,
+		() => "plasma_move",
+		() => 180,
 		() => 600,
 		() => 100,
 		p => {
@@ -1407,7 +1416,10 @@ self.C3_ExpressionFuncs = [
 			const v2 = p._GetNode(2).GetVar();
 			return () => f0(f1((v2.GetValue() / 10)), 5);
 		},
-		() => 0.8,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
 		p => {
 			const n0 = p._GetNode(0);
 			const f1 = p._GetNode(1).GetBoundMethod();
@@ -1432,6 +1444,11 @@ self.C3_ExpressionFuncs = [
 			return () => (n0.ExpObject() + 20);
 		},
 		() => 10,
+		() => 5,
+		() => 0.3,
+		() => 0.05,
+		() => 1.5,
+		() => "plasma_idle",
 		() => "MusicMenu"
 ];
 

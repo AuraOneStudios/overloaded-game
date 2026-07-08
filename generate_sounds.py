@@ -106,6 +106,81 @@ def generate_overload():
         samples.append(wave_val * env * 0.3)
     return samples
 
+def generate_plasma_cannon():
+    # Sci-fi Plasma Cannon Zap
+    samples = []
+    duration = 0.4
+    sample_rate = 44100
+    for i in range(int(duration * sample_rate)):
+        t = i / sample_rate
+        # Pitch drops extremely fast (laser zap effect)
+        freq = 1500 * math.exp(-t * 20) + 100
+        
+        # High frequency energy with FM modulation
+        mod = math.sin(2 * math.pi * (freq * 1.5) * t)
+        car = math.sin(2 * math.pi * (freq + 500 * mod) * t)
+        
+        # White noise for the electrical crackle
+        noise = random.uniform(-1, 1) * 0.3 * math.exp(-t * 10) # nosec B311
+        
+        # Deep sub punch
+        sub = math.sin(2 * math.pi * (100 * math.exp(-t * 15) + 50) * t)
+        
+        # Envelope: very fast attack, exponential decay
+        env = t / 0.02 if t < 0.02 else math.exp(-(t - 0.02) * 10)
+        
+        mix = (car * 0.4 + sub * 0.5 + noise) * env
+        # Saturation/Distortion
+        mix = math.tanh(mix * 2.5) * 0.7
+        samples.append(mix)
+    return samples
+
+def generate_plasma_move():
+    # Pulsing energy moving sound
+    samples = []
+    duration = 1.0
+    sample_rate = 44100
+    for i in range(int(duration * sample_rate)):
+        t = i / sample_rate
+        # Pulsing FM
+        freq = 300
+        mod = math.sin(2 * math.pi * 15 * t) # 15Hz pulse
+        car = math.sin(2 * math.pi * (freq + 200 * mod) * t)
+        
+        # Envelope: fade in, hold, fade out
+        if t < 0.1: env = t / 0.1
+        elif t > 0.9: env = (1.0 - t) / 0.1
+        else: env = 1.0
+        
+        mix = car * env * 0.4
+        samples.append(mix)
+    return samples
+
+def generate_plasma_idle():
+    # Intense electric sparking/frying sound
+    samples = []
+    duration = 1.0
+    sample_rate = 44100
+    for i in range(int(duration * sample_rate)):
+        t = i / sample_rate
+        # Frying noise: high frequency, choppy
+        noise1 = random.uniform(-1, 1) if random.random() > 0.4 else 0 # nosec B311
+        noise2 = random.uniform(-1, 1) if random.random() > 0.95 else 0 # nosec B311
+        
+        # 60Hz and 120Hz hum (electricity)
+        hum = math.sin(2 * math.pi * 60 * t) + math.sin(2 * math.pi * 120 * t) * 0.5
+        
+        # High pitched whine
+        whine = math.sin(2 * math.pi * 800 * t)
+        
+        # Modulate the noise with a 20Hz electric pulse
+        pulse = math.sin(2 * math.pi * 20 * t) * 0.5 + 0.5
+        
+        mix = (hum * 0.4 + whine * 0.1 + noise1 * 0.2 * pulse + noise2 * 0.5) * 0.4
+        mix = math.tanh(mix * 2.0) * 0.7
+        samples.append(mix)
+    return samples
+
 if __name__ == '__main__':
     sounds_dir = 'sounds'
     if not os.path.exists(sounds_dir): os.makedirs(sounds_dir)
@@ -114,4 +189,7 @@ if __name__ == '__main__':
     save_wav(os.path.join(sounds_dir, 'hit.wav'), generate_hit())
     save_wav(os.path.join(sounds_dir, 'howl.wav'), generate_howl())
     save_wav(os.path.join(sounds_dir, 'overload.wav'), generate_overload())
-    print("New mechanical/industrial sounds generated!")
+    save_wav(os.path.join(sounds_dir, 'plasma_cannon.wav'), generate_plasma_cannon())
+    save_wav(os.path.join(sounds_dir, 'plasma_move.wav'), generate_plasma_move())
+    save_wav(os.path.join(sounds_dir, 'plasma_idle.wav'), generate_plasma_idle())
+    print("New mechanical/industrial and plasma sounds generated!")

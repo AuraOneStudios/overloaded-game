@@ -49,7 +49,7 @@
 					"sid": 106298702389785,
 					"parameters": {
 						"audio-file": {
-							"path": "abyss_of_deeds"
+							"path": "game_startscreen"
 						},
 						"loop": "looping",
 						"volume": "0",
