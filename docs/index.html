@@ -455,9 +455,9 @@
         <div class="characters">
             <div class="character-showcase">
                 <img src="./images/char_lizzie-idle-000.png" alt="Lizzie, the main protagonist" loading="lazy">
-                <div class="char-pill" tabindex="0">
+                <div class="char-pill" tabindex="0" role="button" aria-describedby="lizzie-desc">
                     Lizzie
-                    <div class="char-tooltip">
+                    <div class="char-tooltip" id="lizzie-desc" role="tooltip">
                         <p class="en">Wrench in hand, reflexes faster than the chaos around her. Lizzie fights up close and never stops moving.</p>
                         <p class="pt">Chave inglesa em punho, reflexos mais rápidos que o caos ao redor. Lizzie luta de perto e nunca para de se mover.</p>
                     </div>
@@ -465,9 +465,9 @@
             </div>
             <div class="character-showcase archie">
                 <img src="./images/char_archie-idle-000.png" alt="Archie, Lizzie's robotic companion" loading="lazy">
-                <div class="char-pill" tabindex="0">
+                <div class="char-pill" tabindex="0" role="button" aria-describedby="archie-desc">
                     Archie
-                    <div class="char-tooltip">
+                    <div class="char-tooltip" id="archie-desc" role="tooltip">
                         <p class="en">A powerful combat robot built for destruction. When Lizzie mounts Archie, they form an unstoppable armored force.</p>
                         <p class="pt">Um poderoso robô de combate feito para destruição. Quando Lizzie monta Archie, eles formam uma força blindada imparável.</p>
                     </div>
@@ -508,24 +508,43 @@
     </footer>
 
     <script>
+        function safeGetLang() {
+            try {
+                return localStorage.getItem('lang');
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function safeSetLang(val) {
+            try {
+                localStorage.setItem('lang', val);
+            } catch (e) {}
+        }
+
         function applyLanguage(lang) {
             const body = document.body;
             const metaDesc = document.querySelector('meta[name="description"]');
             
-            if (lang === 'pt') {
+            // Normalize language value
+            const targetLang = lang === 'pt' ? 'pt' : 'en';
+            
+            if (targetLang === 'pt') {
                 body.classList.remove('lang-en');
                 body.classList.add('lang-pt');
+                document.documentElement.lang = 'pt';
                 if (metaDesc) {
                     metaDesc.setAttribute('content', 'OVERLOADED - Um jogo top-down de sobrevivência com Lizzie e Archie. Desvende o mistério e domine a sobrecarga permanente.');
                 }
             } else {
                 body.classList.remove('lang-pt');
                 body.classList.add('lang-en');
+                document.documentElement.lang = 'en';
                 if (metaDesc) {
                     metaDesc.setAttribute('content', 'OVERLOADED - An exclusive saga with Lizzie and Archie. Uncover the mystery and master the permanent overload.');
                 }
             }
-            localStorage.setItem('lang', lang);
+            safeSetLang(targetLang);
         }
 
         function toggleLanguage() {
@@ -536,7 +555,7 @@
         // On DOMContentLoaded
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Language Init (LocalStorage -> Browser Detection -> Default English)
-            const savedLang = localStorage.getItem('lang');
+            const savedLang = safeGetLang();
             if (savedLang) {
                 applyLanguage(savedLang);
             } else {
