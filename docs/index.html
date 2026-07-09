@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OVERLOADED | AuraOne Studios&reg;</title>
     
-    <meta name="description" content="OVERLOADED - An exclusive saga with Lizzie and Archie. Uncover the mystery and master the permanent overload." class="en">
-    <meta name="description" content="OVERLOADED - Um jogo top-down de sobrevivência com Lizzie e Archie. Desvende o mistério e domine a sobrecarga permanente." class="pt">
+    <meta name="description" content="OVERLOADED - An exclusive saga with Lizzie and Archie. Uncover the mystery and master the permanent overload.">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -266,6 +265,42 @@
             letter-spacing: 1px;
             color: #ff3366;
             font-weight: 800;
+            position: relative;
+            cursor: default;
+        }
+
+        .char-tooltip {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            width: 220px;
+            background: rgba(15, 17, 21, 0.95);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: normal;
+            text-transform: none;
+            color: var(--text-color);
+            line-height: 1.5;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        .char-tooltip p {
+            margin: 0;
+        }
+
+        .char-pill:hover .char-tooltip,
+        .char-pill:focus .char-tooltip {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+            pointer-events: auto;
         }
 
         footer {
@@ -381,18 +416,30 @@
         <div class="characters">
             <div class="character-showcase">
                 <img src="./images/char_lizzie-idle-000.png" alt="Lizzie, the main protagonist" loading="lazy">
-                <div class="char-pill">Lizzie</div>
+                <div class="char-pill" tabindex="0">
+                    Lizzie
+                    <div class="char-tooltip">
+                        <p class="en">Wrench in hand, reflexes faster than the chaos around her. Lizzie fights up close and never stops moving.</p>
+                        <p class="pt">Chave inglesa em punho, reflexos mais rápidos que o caos ao redor. Lizzie luta de perto e nunca para de se mover.</p>
+                    </div>
+                </div>
             </div>
             <div class="character-showcase archie">
                 <img src="./images/char_archie-idle-000.png" alt="Archie, Lizzie's robotic companion" loading="lazy">
-                <div class="char-pill">Archie</div>
+                <div class="char-pill" tabindex="0">
+                    Archie
+                    <div class="char-tooltip">
+                        <p class="en">A powerful combat robot built for destruction. When Lizzie mounts Archie, they form an unstoppable armored force.</p>
+                        <p class="pt">Um poderoso robô de combate feito para destruição. Quando Lizzie monta Archie, eles formam uma força blindada imparável.</p>
+                    </div>
+                </div>
             </div>
         </div>
         
         <section id="about">
             <div class="about-grid">
                 <div class="media-showcase">
-                    <video autoplay loop muted playsinline loading="lazy">
+                    <video loop muted playsinline poster="./images/gameplay_loop_poster.jpg">
                         <source src="./images/gameplay_loop.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -422,16 +469,61 @@
     </footer>
 
     <script>
-        function toggleLanguage() {
+        function applyLanguage(lang) {
             const body = document.body;
-            if (body.classList.contains('lang-en')) {
+            const metaDesc = document.querySelector('meta[name="description"]');
+            
+            if (lang === 'pt') {
                 body.classList.remove('lang-en');
                 body.classList.add('lang-pt');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', 'OVERLOADED - Um jogo top-down de sobrevivência com Lizzie e Archie. Desvende o mistério e domine a sobrecarga permanente.');
+                }
             } else {
                 body.classList.remove('lang-pt');
                 body.classList.add('lang-en');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', 'OVERLOADED - An exclusive saga with Lizzie and Archie. Uncover the mystery and master the permanent overload.');
+                }
             }
+            localStorage.setItem('lang', lang);
         }
+
+        function toggleLanguage() {
+            const currentLang = document.body.classList.contains('lang-en') ? 'pt' : 'en';
+            applyLanguage(currentLang);
+        }
+
+        // On DOMContentLoaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Language Init (LocalStorage -> Browser Detection -> Default English)
+            const savedLang = localStorage.getItem('lang');
+            if (savedLang) {
+                applyLanguage(savedLang);
+            } else {
+                const browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang && browserLang.startsWith('pt')) {
+                    applyLanguage('pt');
+                } else {
+                    applyLanguage('en');
+                }
+            }
+
+            // 2. Intersection Observer for video play/pause on scroll
+            const video = document.querySelector('#about video');
+            if (video) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            video.play().catch(err => console.log('Autoplay prevented:', err));
+                        } else {
+                            video.pause();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(video);
+            }
+        });
     </script>
 </body>
 </html>
