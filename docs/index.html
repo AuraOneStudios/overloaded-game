@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>OVERLOADED | AuraOne Studios&reg;</title>
     
     <meta name="description" content="OVERLOADED - An exclusive saga with Lizzie and Archie. Uncover the mystery and master the permanent overload.">
@@ -241,7 +241,9 @@
             transition: transform 0.3s ease;
         }
 
-        .character-showcase:hover {
+        .character-showcase:hover,
+        .character-showcase.showcase-highlighted,
+        .character-showcase:has(.char-pill.tooltip-open) {
             transform: scale(1.1);
         }
 
@@ -299,7 +301,7 @@
         }
 
         .character-showcase:not(.archie) .char-pill:hover .char-tooltip,
-        .character-showcase:not(.archie) .char-pill:focus .char-tooltip {
+        .character-showcase:not(.archie) .char-pill.tooltip-open .char-tooltip {
             opacity: 1;
             transform: translateY(-50%) translateX(0);
             pointer-events: auto;
@@ -315,7 +317,7 @@
         }
 
         .character-showcase.archie .char-pill:hover .char-tooltip,
-        .character-showcase.archie .char-pill:focus .char-tooltip {
+        .character-showcase.archie .char-pill.tooltip-open .char-tooltip {
             opacity: 1;
             transform: translateY(-50%) translateX(0);
             pointer-events: auto;
@@ -401,21 +403,149 @@
                 padding: 1.5rem;
             }
 
-            /* Mobile fallback: position tooltips above the name pills */
-            .character-showcase:not(.archie) .char-tooltip,
-            .character-showcase.archie .char-tooltip {
-                top: auto;
-                bottom: calc(100% + 10px);
-                left: 50%;
-                right: auto;
-                transform: translateX(-50%) translateY(4px);
+            .characters {
+                margin-bottom: 0;
+                transition: margin-bottom 0.3s ease;
             }
 
+            /* Push down the about section below only when a tooltip is open */
+            .characters:has(.tooltip-open) {
+                margin-bottom: 10rem;
+            }
+
+            /* Disable sticky hover zoom on mobile, control exclusively via classes */
+            .character-showcase:hover {
+                transform: none !important;
+            }
+            .character-showcase.showcase-highlighted,
+            .character-showcase:has(.char-pill.tooltip-open) {
+                transform: scale(1.1) !important;
+            }
+
+            /* Mobile fallback: position tooltips below the name pills, extending towards center */
+            .character-showcase:not(.archie) .char-tooltip {
+                top: calc(100% + 10px);
+                bottom: auto;
+                left: 0;
+                right: auto;
+                transform: translateY(4px);
+            }
+            .character-showcase.archie .char-tooltip {
+                top: calc(100% + 10px);
+                bottom: auto;
+                right: 0;
+                left: auto;
+                transform: translateY(4px);
+            }
+
+            /* Disable hover/focus tooltip triggers on mobile to avoid overlapping */
             .character-showcase:not(.archie) .char-pill:hover .char-tooltip,
             .character-showcase:not(.archie) .char-pill:focus .char-tooltip,
             .character-showcase.archie .char-pill:hover .char-tooltip,
             .character-showcase.archie .char-pill:focus .char-tooltip {
-                transform: translateX(-50%) translateY(0);
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
+
+            .character-showcase:not(.archie) .char-pill.tooltip-open .char-tooltip {
+                transform: translateY(0);
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+            .character-showcase.archie .char-pill.tooltip-open .char-tooltip {
+                transform: translateY(0);
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+        }
+
+        /* Game Modal Styling */
+        .game-modal[hidden] {
+            display: none;
+        }
+
+        .game-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+        }
+
+        .game-modal__backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .game-modal__panel {
+            position: relative;
+            width: min(96vw, 1400px);
+            height: min(92vh, 900px);
+            margin: 4vh auto;
+            background: #05070a;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .game-modal__close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 2;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .game-modal__close:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .game-modal__frame {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+            background: #000;
+        }
+
+        /* Mobile responsiveness & Touch targets overrides */
+        html {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        button, .btn, .lang-toggle, .game-modal__close {
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        @media (max-width: 768px) {
+            .game-modal__panel {
+                width: 100vw;
+                height: 100dvh;
+                margin: 0;
+                border-radius: 0;
+                border: none;
+            }
+
+            .game-modal__close {
+                top: max(12px, env(safe-area-inset-top));
+                right: max(12px, env(safe-area-inset-right));
             }
         }
 
@@ -442,7 +572,7 @@
         <p class="subtitle pt">Uma saga exclusiva com Lizzie e Archie. Desvende o mistério, domine a sobrecarga.</p>
         
         <div class="cta-container">
-            <a href="./play/" class="btn btn-primary">
+            <a id="playNowBtn" href="./play/" class="btn btn-primary">
                 <span class="en">Play Now</span>
                 <span class="pt">Jogar Agora</span>
             </a>
@@ -507,7 +637,80 @@
         <p>&copy; 2026 AuraOne Studios&reg;. <span class="en">All Rights Reserved for assets, characters, and audio.</span><span class="pt">Todos os direitos reservados para assets, personagens e áudio.</span></p>
     </footer>
 
+    <!-- Game Modal Overlay -->
+    <div id="gameModal" class="game-modal" hidden aria-hidden="true">
+        <div class="game-modal__backdrop" id="gameModalBackdrop"></div>
+        <div class="game-modal__panel" role="dialog" aria-modal="true" aria-label="Jogo OVERLOADED">
+            <button id="closeGameModal" class="game-modal__close" type="button" aria-label="Fechar jogo">&times;</button>
+            <iframe id="gameFrame" class="game-modal__frame" src="" title="OVERLOADED - Jogo" loading="eager" allow="fullscreen; autoplay; keyboard-map"></iframe>
+        </div>
+    </div>
+
     <script>
+        // Clean up any stale root service worker registered for localhost
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for (let registration of registrations) {
+                    if (registration.scope === window.location.origin + '/') {
+                        registration.unregister().then(function(success) {
+                            if (success) {
+                                console.log('Stale root service worker unregistered:', registration.scope);
+                                window.location.reload();
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        const gameUrl = './play/';
+
+        function openGameModal() {
+            const playBtn = document.getElementById('playNowBtn');
+            const modal = document.getElementById('gameModal');
+            const closeBtn = document.getElementById('closeGameModal');
+            const frame = document.getElementById('gameFrame');
+            if (!modal || !frame) return;
+
+            frame.src = gameUrl;
+            modal.removeAttribute('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            // Intercept window.close inside the iframe
+            frame.onload = () => {
+                try {
+                    if (frame.contentWindow) {
+                        frame.contentWindow.close = closeGameModal;
+                    }
+                } catch (e) {
+                    console.warn("Could not override iframe window.close directly:", e);
+                }
+            };
+
+            if (closeBtn) closeBtn.focus();
+        }
+
+        function closeGameModal() {
+            const playBtn = document.getElementById('playNowBtn');
+            const modal = document.getElementById('gameModal');
+            const frame = document.getElementById('gameFrame');
+            if (!modal || !frame) return;
+
+            modal.setAttribute('hidden', '');
+            modal.setAttribute('aria-hidden', 'true');
+            frame.src = '';
+            document.body.style.overflow = '';
+            if (playBtn) playBtn.focus();
+        }
+
+        // Listen for close message from the game iframe
+        window.addEventListener('message', (event) => {
+            if (event.data && event.data.type === 'close-game') {
+                closeGameModal();
+            }
+        });
+
         function safeGetLang() {
             try {
                 return localStorage.getItem('lang');
@@ -581,6 +784,110 @@
                 }, { threshold: 0.1 });
                 observer.observe(video);
             }
+
+            // 3. Bind Play Now button
+            const playBtn = document.getElementById('playNowBtn');
+            if (playBtn) {
+                playBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openGameModal();
+                });
+            }
+
+            // 4. Bind Close Button clicks
+            const closeBtn = document.getElementById('closeGameModal');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeGameModal);
+            }
+
+            // 5. Bind Escape key to close the game
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' || e.key === 'Esc') {
+                    const modal = document.getElementById('gameModal');
+                    if (modal && !modal.hasAttribute('hidden')) {
+                        closeGameModal();
+                    }
+                }
+            });
+
+            // 6. Dismiss character tooltips and highlights on touching/clicking outside or scrolling
+            const showcases = document.querySelectorAll('.character-showcase');
+            const charPills = document.querySelectorAll('.char-pill');
+
+            const dismissAll = (e) => {
+                // If touching/clicking inside a showcase, do not globally dismiss (since local toggle handles it)
+                let insideShowcase = false;
+                showcases.forEach(showcase => {
+                    if (showcase.contains(e.target)) {
+                        insideShowcase = true;
+                    }
+                });
+                if (!insideShowcase) {
+                    charPills.forEach(pill => pill.classList.remove('tooltip-open'));
+                    showcases.forEach(sc => sc.classList.remove('showcase-highlighted'));
+                }
+            };
+
+            document.addEventListener('touchstart', dismissAll, { passive: true });
+            document.addEventListener('mousedown', dismissAll);
+            window.addEventListener('scroll', () => {
+                charPills.forEach(pill => pill.classList.remove('tooltip-open'));
+                showcases.forEach(sc => sc.classList.remove('showcase-highlighted'));
+            }, { passive: true });
+
+            // Separate Toggle for Image (Zoom only) and Name button (Balloon only)
+            showcases.forEach(showcase => {
+                const img = showcase.querySelector('img');
+                const pill = showcase.querySelector('.char-pill');
+                if (!img || !pill) return;
+
+                // Tapping the image only toggles the zoom highlight
+                const handleImageTap = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Close all tooltips
+                    charPills.forEach(p => p.classList.remove('tooltip-open'));
+
+                    const isZoomed = showcase.classList.contains('showcase-highlighted');
+                    // Remove zoom from other showcases
+                    showcases.forEach(sc => sc.classList.remove('showcase-highlighted'));
+
+                    // Toggle zoom on this one
+                    if (!isZoomed) {
+                        showcase.classList.add('showcase-highlighted');
+                    }
+                };
+
+                // Tapping the name pill toggles the text balloon tooltip
+                const handlePillTap = (e) => {
+                    if (e.target.closest('.char-tooltip')) {
+                        return; // Allow interacting with the text balloon itself
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Remove zoom from all showcases
+                    showcases.forEach(sc => sc.classList.remove('showcase-highlighted'));
+
+                    const isOpen = pill.classList.contains('tooltip-open');
+                    // Close all tooltips first (prevent overlapping)
+                    charPills.forEach(p => p.classList.remove('tooltip-open'));
+
+                    // Toggle this one
+                    if (!isOpen) {
+                        pill.classList.add('tooltip-open');
+                    }
+                };
+
+                // Bind toggle to the image (zoom highlight only)
+                img.addEventListener('click', handleImageTap);
+                img.addEventListener('touchstart', handleImageTap, { passive: false });
+
+                // Bind toggle to the name pill (balloon only)
+                pill.addEventListener('click', handlePillTap);
+                pill.addEventListener('touchstart', handlePillTap, { passive: false });
+            });
         });
     </script>
 </body>
