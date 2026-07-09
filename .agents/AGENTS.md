@@ -6,3 +6,7 @@
 # GitFlow Rules
 - ALWAYS use "Create a merge commit" (`--no-ff`) when merging `develop` into `main` to preserve synchronized histories. NEVER use "Squash and merge" for main syncs.
 - "Squash and merge" should only be used when merging `feature/`, `chore/`, or `bugfix/` branches into `develop`.
+
+# GitHub Actions Security Rules
+- ALWAYS pin GitHub Actions to full 40-character commit SHAs instead of mutable version tags (e.g. `uses: actions/checkout@<sha>`) to enforce supply-chain hardening and build reproducibility.
+- ALWAYS include a descriptive comment indicating the release tag version next to the SHA (e.g., `# v7.0.0`) to ensure readability and maintainability.
