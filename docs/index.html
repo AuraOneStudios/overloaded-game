@@ -271,9 +271,6 @@
 
         .char-tooltip {
             position: absolute;
-            bottom: calc(100% + 10px);
-            left: 50%;
-            transform: translateX(-50%) translateY(4px);
             width: 220px;
             background: rgba(15, 17, 21, 0.95);
             border: 1px solid var(--glass-border);
@@ -292,15 +289,40 @@
             backdrop-filter: blur(10px);
         }
 
-        .char-tooltip p {
-            margin: 0;
+        /* Desktop: Lizzie tooltip (left side) */
+        .character-showcase:not(.archie) .char-tooltip {
+            bottom: auto;
+            top: 50%;
+            right: calc(100% + 15px);
+            left: auto;
+            transform: translateY(-50%) translateX(-4px);
         }
 
-        .char-pill:hover .char-tooltip,
-        .char-pill:focus .char-tooltip {
+        .character-showcase:not(.archie) .char-pill:hover .char-tooltip,
+        .character-showcase:not(.archie) .char-pill:focus .char-tooltip {
             opacity: 1;
-            transform: translateX(-50%) translateY(0);
+            transform: translateY(-50%) translateX(0);
             pointer-events: auto;
+        }
+
+        /* Desktop: Archie tooltip (right side) */
+        .character-showcase.archie .char-tooltip {
+            bottom: auto;
+            top: 50%;
+            left: calc(100% + 15px);
+            right: auto;
+            transform: translateY(-50%) translateX(4px);
+        }
+
+        .character-showcase.archie .char-pill:hover .char-tooltip,
+        .character-showcase.archie .char-pill:focus .char-tooltip {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+            pointer-events: auto;
+        }
+
+        .char-tooltip p {
+            margin: 0;
         }
 
         footer {
@@ -377,6 +399,23 @@
                 grid-template-columns: 1fr;
                 text-align: center;
                 padding: 1.5rem;
+            }
+
+            /* Mobile fallback: position tooltips above the name pills */
+            .character-showcase:not(.archie) .char-tooltip,
+            .character-showcase.archie .char-tooltip {
+                top: auto;
+                bottom: calc(100% + 10px);
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%) translateY(4px);
+            }
+
+            .character-showcase:not(.archie) .char-pill:hover .char-tooltip,
+            .character-showcase:not(.archie) .char-pill:focus .char-tooltip,
+            .character-showcase.archie .char-pill:hover .char-tooltip,
+            .character-showcase.archie .char-pill:focus .char-tooltip {
+                transform: translateX(-50%) translateY(0);
             }
         }
 
