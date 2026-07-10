@@ -64,13 +64,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 544189603001063,
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 928700745656069,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "StartButtom"
+						"object": "StartButtom",
+						"type": "start"
 					}
 				}
 			],

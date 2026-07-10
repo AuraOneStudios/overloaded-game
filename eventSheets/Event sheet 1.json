@@ -870,13 +870,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 331225272727129,
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 502960241589352,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "PauseTextYes"
+						"object": "PauseTextYes",
+						"type": "start"
 					}
 				}
 			],
@@ -901,13 +900,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 820749237611698,
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 318803442352868,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "PauseTextNo"
+						"object": "PauseTextNo",
+						"type": "end"
 					}
 				}
 			],
@@ -1216,6 +1214,204 @@
 				}
 			],
 			"sid": 348418932100240
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-nth-touch-start",
+					"objectClass": "Touch",
+					"sid": 901387610441479,
+					"parameters": {
+						"touch-number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Joystick",
+					"sid": 337194862674560,
+					"parameters": {
+						"x": "Touch.X",
+						"y": "Touch.Y"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "JoystickInner",
+					"sid": 620734840191996,
+					"parameters": {
+						"x": "Touch.X",
+						"y": "Touch.Y"
+					}
+				}
+			],
+			"sid": 812353177535985
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-in-touch",
+					"objectClass": "Touch",
+					"sid": 788757504588796
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "JoystickInner",
+					"sid": 235095632039585,
+					"parameters": {
+						"x": "Joystick.X + cos(angle(Joystick.X, Joystick.Y, Touch.X, Touch.Y)) * min(distance(Joystick.X, Joystick.Y, Touch.X, Touch.Y), 50)",
+						"y": "Joystick.Y + sin(angle(Joystick.X, Joystick.Y, Touch.X, Touch.Y)) * min(distance(Joystick.X, Joystick.Y, Touch.X, Touch.Y), 50)"
+					}
+				}
+			],
+			"sid": 638425442905212,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 722463691700778,
+							"parameters": {
+								"angle": "angle(Joystick.X, Joystick.Y, JoystickInner.X, JoystickInner.Y)",
+								"first-angle": "315",
+								"second-angle": "45"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Char_Lizzie",
+							"sid": 475893811611734,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 756716781688714
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 459085570349128,
+							"parameters": {
+								"angle": "angle(Joystick.X, Joystick.Y, JoystickInner.X, JoystickInner.Y)",
+								"first-angle": "45",
+								"second-angle": "135"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Char_Lizzie",
+							"sid": 371145088804016,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 780882346291505
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 414479432588623,
+							"parameters": {
+								"angle": "angle(Joystick.X, Joystick.Y, JoystickInner.X, JoystickInner.Y)",
+								"first-angle": "135",
+								"second-angle": "225"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Char_Lizzie",
+							"sid": 305151026546498,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 686026992187291
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 366007135906496,
+							"parameters": {
+								"angle": "angle(Joystick.X, Joystick.Y, JoystickInner.X, JoystickInner.Y)",
+								"first-angle": "225",
+								"second-angle": "315"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Char_Lizzie",
+							"sid": 830924278419277,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 722852085721054
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-nth-touch-end",
+					"objectClass": "Touch",
+					"sid": 332086775090925,
+					"parameters": {
+						"touch-number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Joystick",
+					"sid": 463128614410420,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "JoystickInner",
+					"sid": 632497022001734,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 591745555668406
 		}
 	],
 	"sid": 984714394744369
