@@ -301,6 +301,7 @@
         }
 
         .character-showcase:not(.archie) .char-pill:hover .char-tooltip,
+        .character-showcase:not(.archie) .char-pill:focus .char-tooltip,
         .character-showcase:not(.archie) .char-pill.tooltip-open .char-tooltip {
             opacity: 1;
             transform: translateY(-50%) translateX(0);
@@ -317,6 +318,7 @@
         }
 
         .character-showcase.archie .char-pill:hover .char-tooltip,
+        .character-showcase.archie .char-pill:focus .char-tooltip,
         .character-showcase.archie .char-pill.tooltip-open .char-tooltip {
             opacity: 1;
             transform: translateY(-50%) translateX(0);
@@ -706,6 +708,10 @@
 
         // Listen for close message from the game iframe
         window.addEventListener('message', (event) => {
+            if (event.origin !== window.location.origin) return;
+            const gameFrame = document.getElementById('gameFrame');
+            if (event.source !== gameFrame?.contentWindow) return;
+            
             if (event.data && event.data.type === 'close-game') {
                 closeGameModal();
             }
