@@ -37,13 +37,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 708803477117623,
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 217106146155051,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "PauseTextNo"
+						"object": "PauseTextNo",
+						"type": "end"
 					}
 				}
 			],
@@ -68,13 +67,12 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 808295952948411,
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 855114091740438,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "PauseTextYes"
+						"object": "PauseTextYes",
+						"type": "start"
 					}
 				}
 			],

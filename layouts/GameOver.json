@@ -58,7 +58,7 @@
 				{
 					"type": "Text2",
 					"properties": {
-						"text": "CONTINUE",
+						"text": "CONTINUE?",
 						"enable-bbcode": true,
 						"font": "MV Boli",
 						"size": 24,

@@ -49,6 +49,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -81,7 +88,7 @@
 			"UI_HUD_Overpowered",
 			"Proj_Wrench",
 			"Audio",
-			"Sprite",
+			"StartScreenBack",
 			"StartButtom",
 			"Mouse",
 			"ExitButtom",
@@ -91,7 +98,10 @@
 			"Text",
 			"Text2",
 			"Text3",
-			"Proj_PlasmBall"
+			"Proj_PlasmBall",
+			"Touch",
+			"Joystick",
+			"JoystickInner"
 		],
 		"subfolders": []
 	},
@@ -366,7 +376,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1.30.20",
+		"version": "0.1.30.27",
 		"autoIncrementVersion": true,
 		"author": "AuraOne Studios",
 		"authorEmail": "fabiomendesilva@gmail.com",
