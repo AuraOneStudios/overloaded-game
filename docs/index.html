@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#05070a">
     <title>OVERLOADED | AuraOne Studios&reg;</title>
     
     <meta name="description" content="OVERLOADED - An exclusive saga with Lizzie and Archie. Uncover the mystery and master the permanent overload.">
@@ -679,6 +683,20 @@
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
 
+            // Request fullscreen for a better immersive experience
+            try {
+                const elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen().catch(err => console.warn(err));
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            } catch (err) {
+                console.warn("Fullscreen request failed", err);
+            }
+
             // Intercept window.close inside the iframe
             frame.onload = () => {
                 try {
@@ -703,6 +721,22 @@
             modal.setAttribute('aria-hidden', 'true');
             frame.src = '';
             document.body.style.overflow = '';
+
+            // Exit fullscreen if we entered it
+            try {
+                if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen().catch(err => console.warn(err));
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            } catch (err) {
+                console.warn("Exit fullscreen failed", err);
+            }
+
             if (playBtn) playBtn.focus();
         }
 
