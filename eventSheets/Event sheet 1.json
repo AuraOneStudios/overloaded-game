@@ -766,6 +766,14 @@
 						"stereo-pan": "0",
 						"tag-optional": "\"\""
 					}
+				},
+				{
+					"id": "set-layout-scale",
+					"objectClass": "System",
+					"sid": 809843634367649,
+					"parameters": {
+						"scale": "2.5"
+					}
 				}
 			],
 			"sid": 726118706618611
