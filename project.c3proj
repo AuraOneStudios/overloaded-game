@@ -376,7 +376,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "0.1.30.27",
+		"version": "0.1.30.33",
 		"autoIncrementVersion": true,
 		"author": "AuraOne Studios",
 		"authorEmail": "fabiomendesilva@gmail.com",
@@ -386,7 +386,7 @@
 		"zAxisScale": "regular",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenMode": "scale-outer",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [

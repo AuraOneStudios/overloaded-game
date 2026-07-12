@@ -470,7 +470,7 @@
 			"sampling": "auto",
 			"parallaxX": 0,
 			"parallaxY": 0,
-			"scaleRate": 1,
+			"scaleRate": 0,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
 			"drawOrder": "z-order",
