@@ -21,19 +21,19 @@ Focaremos inicialmente nas ações técnicas de desenvolvimento P0.
 
 ### Landing Page e Marketing (0a)
 * **Objetivo:** Transformar o botão inútil ("View Source") no CTA principal para jogar.
-#### [MODIFY] [index.html](file:///g:/Meu%20Drive/%23%23%23%23%23OVERLOADED%20-%20Assets/overloaded-game/docs/index.html)
+#### [MODIFY] [index.html](../index.html)
 - Trocar o link do botão `.btn-primary` de "https://github.com/..." para `./play/` (ou caminho relativo correto).
 - Trocar o texto do botão de "View Source / Ver Código Fonte" para "Play Now / Jogar Agora".
 
 ### Game Over Stats (0c)
 * **Objetivo:** Adicionar informações como Inimigos Derrotados e Tempo Sobrevivido.
-#### [MODIFY] [GameOver.json](file:///g:/Meu%20Drive/%23%23%23%23%23OVERLOADED%20-%20Assets/overloaded-game/layouts/GameOver.json) e [Event sheet 3.json](file:///g:/Meu%20Drive/%23%23%23%23%23OVERLOADED%20-%20Assets/overloaded-game/eventSheets/Event%20sheet%203.json) (ou equivalente do Game Over)
+#### [MODIFY] [GameOver.json](../../layouts/GameOver.json) e [Event sheet 3.json](../../eventSheets/Event%20sheet%203.json) (ou equivalente do Game Over)
 - Adicionar objetos de Texto na tela de Game Over.
 - Passar os valores globais (`Score` e uma nova variável para tempo sobrevivido) do Gameplay para a tela de Game Over.
 
 ### Configurações de Volume (6)
 * **Objetivo:** Evitar reviews negativos sobre áudio implementando controle mínimo.
-#### [MODIFY] [StartScreen.json](file:///g:/Meu%20Drive/%23%23%23%23%23OVERLOADED%20-%20Assets/overloaded-game/layouts/StartScreen.json) e [GamePlay.json](file:///g:/Meu%20Drive/%23%23%23%23%23OVERLOADED%20-%20Assets/overloaded-game/layouts/GamePlay.json)
+#### [MODIFY] [StartScreen.json](../../layouts/StartScreen.json) e [GamePlay.json](../../layouts/GamePlay.json)
 - Adicionar um pequeno ícone ou texto de "Sound: ON/OFF" ou um controle de volume.
 - Vincular a variável global de controle de som à `Audio` tag ou master volume no Construct.
 

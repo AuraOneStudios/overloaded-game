@@ -4,7 +4,7 @@ O nosso agente navegador jogou uma partida rápida e capturou as imagens da aç�
 
 ### Gravação da Horda em Ação (MP4 - Pronto para o YouTube)
 O arquivo de vídeo no formato MP4 (compatível com o YouTube) foi salvo no seu computador no seguinte endereço:
-[**overloaded_gameplay_demo.mp4**](file:///C:/Users/F%C3%A1bioMendes/.gemini/antigravity-ide/brain/ca45716f-87c1-46bc-a646-2acbbe6d91df/overloaded_gameplay_demo.mp4)
+**overloaded_gameplay_demo.mp4** (salvo localmente no diretório de artefatos da IA)
 
 > [!WARNING]
 > **Limitações do Robô:** O subagente de testes automatizados que grava esses vídeos roda em um navegador virtual sem interface gráfica (headless) e **não possui drivers de áudio**. É fisicamente impossível para a IA gravar o som do jogo (como os tiros, uivos e música de fundo). 
